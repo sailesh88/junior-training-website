@@ -21,7 +21,7 @@ let URL_Interview = "https://jsonplaceholder.typicode.com/users";
 
 // Qxf2 EMAILJS credentials
 let service_id = "default_service";
-let template_id = "careers_application";
+let template_id = "junior_training";
 let user_id = "user_8k6FfpYGOYlfflIsrTFyF";
 
 init(user_id);
@@ -66,10 +66,10 @@ class Apply extends Component {
       check5: false,
     };
 
-    // we can define all the  error variable here 
-    this.email_error = "";
+    // we can define all the  error variable here
+    this.email_error = false;
 
-    //This variable is to define initial state which will be used once the form is submitted successfully 
+    //This variable is to define initial state which will be used once the form is submitted successfully
     this.baseState = this.state;
 
     this.handleChange = this.handleChange.bind(this);
@@ -81,15 +81,11 @@ class Apply extends Component {
 
   // function for handling the select options
   handleSelectChange = (programming_level) => {
-    console.log(
-      this.state.programming_level,
-      this.state.educationYear.getFullYear()
-    );
     this.setState({ programming_level });
     this.setButton();
   };
 
-  // function for checkbox 
+  // function for checkbox
   handleInputChange = (event) => {
     const id = event.target.id;
 
@@ -115,7 +111,6 @@ class Apply extends Component {
     this.setButton();
   };
 
-
   // function to store all the input values according to their ID's
   handleChange = (event) => {
     const id = event.target.id;
@@ -123,12 +118,11 @@ class Apply extends Component {
       case "Name":
         this.setState({ name: event.target.value });
         break;
-      case "email":
+      case "Email":
+        this.email_error = true;
         if (validator.isEmail(event.target.value)) {
-          this.email_error = "";
+          this.email_error = false;
           this.setState({ email: event.target.value });
-        } else {
-          this.email_error = "Enter valid Email!";
         }
         break;
       case "education_college":
@@ -234,7 +228,6 @@ class Apply extends Component {
     const name = event.target.name;
     const val = event.target.value;
 
-    console.log(name, val);
     switch (name) {
       case "college-projects":
         if (val === "yes") {
@@ -330,7 +323,7 @@ class Apply extends Component {
       (result) => {
         alert(message);
         console.log(result.text);
-        this.setState(this.baseState);  //to set the state to initial value
+        this.setState(this.baseState); //to set the state to initial value
         event.target.reset(); //reset the form
       },
       (error) => {
@@ -348,7 +341,7 @@ class Apply extends Component {
     console.log(this.state.persons);
   };
 
-  // once the app is loaded then this function is called 
+  // once the app is loaded then this function is called
   componentDidMount() {
     console.log("Find a bug and the course price is free");
   }
@@ -359,7 +352,7 @@ class Apply extends Component {
     return (
       <section id="apply">
         <Slide left duration={1300}>
-          <div className="row education">
+          <div className="row education" data-testid="apply">
             <div className="eight columns header-col">
               <h1>
                 <span>Apply Here</span>
@@ -373,13 +366,15 @@ class Apply extends Component {
         </Slide>
 
         <Slide left duration={1300}>
-          <div className="row work">
+          <div className="row work" data-testid="form">
             <div className="twelve columns header-col">
               <form onSubmit={this.handleSubmit}>
                 <label>
                   Name {imp}
                   <input
+                    data-testid="name"
                     id="Name"
+
                     className="input-text form-control form-control-lg"
                     type="text"
                     value={this.state.name}
@@ -390,25 +385,20 @@ class Apply extends Component {
                 <label>
                   Email {imp}
                   <input
-                    id="email"
+                    data-testid="email"
+                    id="Email"
                     className="input-text"
                     type="text"
                     onChange={this.handleChange}
                   />
-                  <span
-                    style={{
-                      fontWeight: "bold",
-                      color: "red",
-                    }}
-                  >
-                    {this.email_error}
-                  </span>
+                  { this.email_error ?( <span className="required">Email not valid</span>) : null}
                 </label>
 
-                <Collapsible
-                  className="collapsible"
-                  trigger="Education(enter all your education detail by clicking on this):"
-                >
+                <label>
+                  Enter all your education detail expanding the Education{imp}
+                </label>
+
+                <Collapsible className="collapsible" trigger="Education">
                   <div
                     style={{
                       display: "flex",
@@ -653,7 +643,7 @@ class Apply extends Component {
                 <label>Do you understand that:</label>
 
                 <div>
-                  <label class="container">
+                  <label className="container">
                     fully remote{" "}
                     <input
                       type="checkbox"
@@ -661,9 +651,9 @@ class Apply extends Component {
                       onChange={this.handleInputChange}
                     />{" "}
                     {imp}
-                    <span class="checkmark"></span>
+                    <span className="checkmark"></span>
                   </label>
-                  <label class="container">
+                  <label className="container">
                     {" "}
                     not for everyone{" "}
                     <input
@@ -672,9 +662,9 @@ class Apply extends Component {
                       onChange={this.handleInputChange}
                     />{" "}
                     {imp}
-                    <span class="checkmark"></span>
+                    <span className="checkmark"></span>
                   </label>
-                  <label class="container">
+                  <label className="container">
                     {" "}
                     fast paced{" "}
                     <input
@@ -683,9 +673,9 @@ class Apply extends Component {
                       onChange={this.handleInputChange}
                     />{" "}
                     {imp}
-                    <span class="checkmark"></span>
+                    <span className="checkmark"></span>
                   </label>
-                  <label class="container">
+                  <label className="container">
                     {" "}
                     no placement guarantee{" "}
                     <input
@@ -694,9 +684,9 @@ class Apply extends Component {
                       onChange={this.handleInputChange}
                     />{" "}
                     {imp}
-                    <span class="checkmark"></span>
+                    <span className="checkmark"></span>
                   </label>
-                  <label class="container">
+                  <label className="container">
                     {" "}
                     no money back{" "}
                     <input
@@ -705,20 +695,21 @@ class Apply extends Component {
                       onChange={this.handleInputChange}
                     />{" "}
                     {imp}
-                    <span class="checkmark"></span>
+                    <span className="checkmark"></span>
                   </label>
                 </div>
+                {!this.state.isEnabled ?(
+                  <span className="required">please fill all the required* &nbsp; fields(min 4 characters each) to submit your application <br/> </span> 
+                ): null}
 
                 <input
                   style={{
-                    backgroundColor: !this.state.isEnabled
-                      ? "grey"
-                      : "lightseagreen",
                     borderRadius: 5,
-                    marginTop: 30,
+                    marginTop: 10,
                     width: 100,
                     padding: 4,
                   }}
+                  className={!this.state.isEnabled? "disabled" : null}
                   disabled={!this.state.isEnabled}
                   type="submit"
                   value="submit"

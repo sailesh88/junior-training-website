@@ -1,0 +1,556 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+<section
+  id="apply"
+>
+  <div
+    className="react-reveal row education"
+    data-testid="apply"
+    style={
+      Object {
+        "opacity": undefined,
+      }
+    }
+  >
+    <div
+      className="eight columns header-col"
+    >
+      <h1>
+        <span>
+          Apply Here
+        </span>
+      </h1>
+    </div>
+    <div
+      className="nine columns main-col"
+    >
+      <div
+        className="row item"
+      />
+    </div>
+  </div>
+  <div
+    className="react-reveal row work"
+    data-testid="form"
+    style={
+      Object {
+        "opacity": undefined,
+      }
+    }
+  >
+    <div
+      className="twelve columns header-col"
+    >
+      <form
+        onSubmit={[Function]}
+      >
+        <label>
+          Name 
+          <span
+            className="required"
+          >
+            *
+          </span>
+          <input
+            className="input-text form-control form-control-lg"
+            data-testid="name"
+            id="Name"
+            onChange={[Function]}
+            type="text"
+            value=""
+          />
+        </label>
+        <label>
+          Email 
+          <span
+            className="required"
+          >
+            *
+          </span>
+          <input
+            className="input-text"
+            data-testid="email"
+            id="Email"
+            onChange={[Function]}
+            type="text"
+          />
+        </label>
+        <label>
+          Enter all your education detail expanding the Education
+          <span
+            className="required"
+          >
+            *
+          </span>
+        </label>
+        <div
+          className="Collapsible collapsible"
+        >
+          <span
+            className="Collapsible__trigger is-closed"
+            onClick={[Function]}
+            onKeyPress={[Function]}
+            style={null}
+            tabIndex={null}
+          >
+            Education
+          </span>
+          <div
+            className="Collapsible__contentOuter"
+            hidden={false}
+            onTransitionEnd={[Function]}
+            style={
+              Object {
+                "WebkitTransition": "height 400ms linear",
+                "height": 0,
+                "msTransition": "height 400ms linear",
+                "overflow": "hidden",
+                "transition": "height 400ms linear",
+              }
+            }
+          >
+            <div
+              className="Collapsible__contentInner"
+            >
+              <div
+                style={
+                  Object {
+                    "display": "flex",
+                    "flexDirection": "column",
+                    "padding": 15,
+                  }
+                }
+              >
+                <label>
+                  College
+                  <span
+                    className="required"
+                  >
+                    *
+                  </span>
+                </label>
+                <input
+                  className="input-text"
+                  id="education_college"
+                  onChange={[Function]}
+                  type="text"
+                  value=""
+                />
+                <label>
+                  Course
+                  <span
+                    className="required"
+                  >
+                    *
+                  </span>
+                </label>
+                <input
+                  className="input-text"
+                  id="education_course"
+                  onChange={[Function]}
+                  type="text"
+                  value=""
+                />
+                <label>
+                  Branch
+                  <span
+                    className="required"
+                  >
+                    *
+                  </span>
+                </label>
+                <input
+                  className="input-text"
+                  id="education_branch"
+                  onChange={[Function]}
+                  type="text"
+                  value=""
+                />
+                <label>
+                  year of pass out
+                  <span
+                    className="required"
+                  >
+                    *
+                  </span>
+                </label>
+                <div
+                  className="react-datepicker-wrapper"
+                >
+                  <div
+                    className="react-datepicker__input-container"
+                  >
+                    <input
+                      className="input-number"
+                      disabled={false}
+                      id="education_year"
+                      onBlur={[Function]}
+                      onChange={[Function]}
+                      onClick={[Function]}
+                      onFocus={[Function]}
+                      onKeyDown={[Function]}
+                      readOnly={false}
+                      type="text"
+                      value="2021"
+                    />
+                  </div>
+                </div>
+                <span
+                  style={
+                    Object {
+                      "color": "red",
+                      "fontWeight": "bold",
+                    }
+                  }
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <label>
+          A little bit about yourself 
+          <span
+            className="required"
+          >
+            *
+          </span>
+          <textarea
+            className="input-text"
+            id="personalInfo"
+            onChange={[Function]}
+            type="text"
+            value=""
+          />
+        </label>
+        <label>
+          Have you done any projects outside of college? 
+          <span
+            className="required"
+          >
+            *
+          </span>
+          <br />
+          <div
+            onChange={[Function]}
+          >
+            <input
+              name="college-projects"
+              type="radio"
+              value="yes"
+            />
+            Yes
+            <br />
+            <input
+              name="college-projects"
+              type="radio"
+              value="no"
+            />
+             No
+          </div>
+        </label>
+        <label>
+          LinkedIn profile 
+          <span
+            className="required"
+          >
+            *
+          </span>
+          <input
+            className="input-text"
+            id="linkedIn"
+            onChange={[Function]}
+            type="text"
+            value=""
+          />
+        </label>
+        <label>
+          What do you know about testing? 
+          <span
+            className="required"
+          >
+            *
+          </span>
+          <textarea
+            className="input-text"
+            id="testing-knowledge"
+            onChange={[Function]}
+            type="text"
+            value=""
+          />
+        </label>
+        <label>
+          Would you like to start your career in software testing? 
+          <span
+            className="required"
+          >
+            *
+          </span>
+          <textarea
+            className="input-text"
+            id="software-testing"
+            onChange={[Function]}
+            type="text"
+            value=""
+          />
+        </label>
+        <label>
+          Level of programming
+          <span
+            className="required"
+          >
+            *
+          </span>
+          <div
+            className="input-select css-2b097c-container"
+            onKeyDown={[Function]}
+          >
+            <span
+              aria-atomic="false"
+              aria-live="polite"
+              aria-relevant="additions text"
+              className="css-1f43avz-a11yText-A11yText"
+            />
+            <div
+              className=" css-yk16xz-control"
+              onMouseDown={[Function]}
+              onTouchEnd={[Function]}
+            >
+              <div
+                className=" css-g1d714-ValueContainer"
+              >
+                <div
+                  className=" css-1wa3eu0-placeholder"
+                >
+                  Select...
+                </div>
+                <input
+                  aria-autocomplete="list"
+                  className="css-wmatm6-dummyInput-DummyInput"
+                  disabled={false}
+                  id="react-select-8-input"
+                  onBlur={[Function]}
+                  onChange={[Function]}
+                  onFocus={[Function]}
+                  readOnly={true}
+                  tabIndex="0"
+                  value=""
+                />
+              </div>
+              <div
+                className=" css-1hb7zxy-IndicatorsContainer"
+              >
+                <span
+                  className=" css-1okebmr-indicatorSeparator"
+                />
+                <div
+                  aria-hidden="true"
+                  className=" css-tlfecz-indicatorContainer"
+                  onMouseDown={[Function]}
+                  onTouchEnd={[Function]}
+                >
+                  <svg
+                    aria-hidden="true"
+                    className="css-tj5bde-Svg"
+                    focusable="false"
+                    height={20}
+                    viewBox="0 0 20 20"
+                    width={20}
+                  >
+                    <path
+                      d="M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+        </label>
+        <label>
+          What languages do you code in? 
+          <span
+            className="required"
+          >
+            *
+          </span>
+          <input
+            className="input-text"
+            id="languages"
+            onChange={[Function]}
+            type="text"
+            value=""
+          />
+        </label>
+        <label>
+          How did you find out about us? 
+          <span
+            className="required"
+          >
+            *
+          </span>
+          <input
+            className="input-text"
+            id="find-us"
+            onChange={[Function]}
+            type="text"
+            value=""
+          />
+        </label>
+        <label>
+          What are you looking for from this program? 
+          <span
+            className="required"
+          >
+            *
+          </span>
+          <input
+            className="input-text"
+            id="looking-for"
+            onChange={[Function]}
+            type="text"
+            value=""
+          />
+        </label>
+        <label>
+          What are your technical interests? 
+          <span
+            className="required"
+          >
+            *
+          </span>
+          <input
+            className="input-text"
+            id="technical-interest"
+            onChange={[Function]}
+            type="text"
+            value=""
+          />
+        </label>
+        <label>
+          Do you understand that:
+        </label>
+        <div>
+          <label
+            className="container"
+          >
+            fully remote
+             
+            <input
+              id="check1"
+              onChange={[Function]}
+              type="checkbox"
+            />
+             
+            <span
+              className="required"
+            >
+              *
+            </span>
+            <span
+              className="checkmark"
+            />
+          </label>
+          <label
+            className="container"
+          >
+             
+            not for everyone
+             
+            <input
+              id="check2"
+              onChange={[Function]}
+              type="checkbox"
+            />
+             
+            <span
+              className="required"
+            >
+              *
+            </span>
+            <span
+              className="checkmark"
+            />
+          </label>
+          <label
+            className="container"
+          >
+             
+            fast paced
+             
+            <input
+              id="check3"
+              onChange={[Function]}
+              type="checkbox"
+            />
+             
+            <span
+              className="required"
+            >
+              *
+            </span>
+            <span
+              className="checkmark"
+            />
+          </label>
+          <label
+            className="container"
+          >
+             
+            no placement guarantee
+             
+            <input
+              id="check4"
+              onChange={[Function]}
+              type="checkbox"
+            />
+             
+            <span
+              className="required"
+            >
+              *
+            </span>
+            <span
+              className="checkmark"
+            />
+          </label>
+          <label
+            className="container"
+          >
+             
+            no money back
+             
+            <input
+              id="check5"
+              onChange={[Function]}
+              type="checkbox"
+            />
+             
+            <span
+              className="required"
+            >
+              *
+            </span>
+            <span
+              className="checkmark"
+            />
+          </label>
+        </div>
+        <input
+          disabled={true}
+          style={
+            Object {
+              "backgroundColor": "grey",
+              "borderRadius": 5,
+              "marginTop": 30,
+              "padding": 4,
+              "width": 100,
+            }
+          }
+          type="submit"
+          value="submit"
+        />
+      </form>
+    </div>
+  </div>
+</section>
+`;
