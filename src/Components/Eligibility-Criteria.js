@@ -13,7 +13,7 @@ class Eligibility extends Component {
 
   render() {
     return (
-      <section id="eligibility">
+      <section id="eligibility" data-testid="eligibility" >
         <Slide left duration={1300}>
           <div className="row education">
             <div className="eight columns header-col">

@@ -5,7 +5,7 @@ import Fade from "react-reveal";
 class Header extends Component {
   render() {
     return (
-      <header id="home">
+      <header id="home" data-testid="home" >
         <ParticlesBg type="circle" bg={true} />
 
         <nav id="nav-wrap">
@@ -70,11 +70,11 @@ class Header extends Component {
               </a>
             </li>
 
-            <li>
+            {/* <li>
               <a className="smoothscroll" href="#contact">
                 Contact
               </a>
-            </li>
+            </li> */}
           </ul>
         </nav>
 

@@ -231,7 +231,10 @@ ul#nav li.current a {
   color: #fff;
   margin-bottom: 12px;
 }
-#benefits p,
+
+
+#benefits li,
+#benefits h6,
 #about p {
   line-height: 30px;
   color: #ccc;
@@ -889,10 +892,10 @@ call-to-action .button {
   margin-right: 10px;
 }
 #image-loader {
-  display: none;
+  
   position: relative;
-  left: 18px;
-  top: 17px;
+  left: 25px;
+  top: 0;
 }
 
 /* Twitter Feed */
@@ -917,7 +920,7 @@ call-to-action .button {
 /* i. Footer
 /* ------------------------------------------------------------------ */
 
-footer {
+footer{
   padding-top: 48px;
   margin-bottom: 48px;
   color: #303030;
@@ -939,6 +942,7 @@ footer a:focus {
 footer .copyright {
   margin: 0;
   padding: 0;
+  color: darkgrey;
 }
 footer .copyright li {
   display: inline-block;
@@ -1075,18 +1079,18 @@ footer .social-links li:first-child {
   border-radius: 10px;
   margin-top: 10px;
   margin-bottom: 50px;
+  
 }
 
 .Collapsible__trigger {
   font-family: "opensans-semibold", sans-serif;
-  color: #0d0d0d;
   font-weight: bold;
   font-size: 15px;
-
   background-color: lightgrey;
   padding: 15px;
-  border-radius: 12px;
-  box-shadow: inset;
+  border-radius: 10px;
+  box-shadow: 0 0 10px 0px rgba(0,0,0,0.2);
+  cursor:pointer;
 }
 
 /* Customize the label (the container) */

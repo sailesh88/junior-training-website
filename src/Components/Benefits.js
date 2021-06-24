@@ -4,23 +4,19 @@ import Fade from "react-reveal";
 class Benefits extends Component {
   render() {
     return (
-      <section id="benefits">
+      <section id="benefits" data-testid="benefits" >
         <Fade duration={1000}>
           <div className="row">
             <div className="row">
-              <h6
-                style={{
-                  textAlign: "justify",
-                  color: "wheatish",
-                  paddingLeft: 50,
-                  paddingRight: 50,
-                }}
-              >
+              
+              
+              <h6>
                 {" "}
                 Why join?
+                <hr/>
                 <ul
                   style={{
-                    paddingLeft: 100,
+                    paddingLeft: 50,
                     fontSize: 14,
                   }}
                 >

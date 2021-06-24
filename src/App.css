@@ -1,7 +1,14 @@
-.disabled{
-    background-color: #ccc !important;
-    box-shadow: none !important;
-    opacity: 0.9 !important;
-    pointer-events: none;
-    
+.disabled {
+  background-color: #ccc !important;
+  box-shadow: none !important;
+  opacity: 0.9 !important;
+  pointer-events: none;
+}
+
+.react-datepicker__year-text {
+  display: inline-block;
+  width: 5rem;
+  margin: 2.5rem;
+  font-size: 12px;
+  padding: 0.6rem;
 }

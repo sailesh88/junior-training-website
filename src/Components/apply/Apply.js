@@ -8,6 +8,9 @@ import DatePicker from "react-datepicker";
 import Collapsible from "react-collapsible";
 import "react-datepicker/dist/react-datepicker.css";
 
+import { Modal } from "antd";
+import "antd/dist/antd.css"; // or 'antd/dist/antd.less'
+
 const options = [
   { value: "beginner", label: "Beginner" },
   { value: "intermediate", label: "Intermediate" },
@@ -55,6 +58,7 @@ class Apply extends Component {
       technical_interest: "",
       looking_from_us: "",
       isEnabled: false,
+      show: false,
     };
 
     // this is for the checkboxes at the bottom of the form
@@ -69,8 +73,13 @@ class Apply extends Component {
     // we can define all the  error variable here
     this.email_error = false;
 
+    this.isSubmitted = false;
+
     //This variable is to define initial state which will be used once the form is submitted successfully
     this.baseState = this.state;
+
+    // message for successfully submitting the application 
+    this.successMessage = "";
 
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -116,7 +125,9 @@ class Apply extends Component {
     const id = event.target.id;
     switch (id) {
       case "Name":
-        this.setState({ name: event.target.value });
+        if (validator.isAlpha(event.target.value)) {
+          this.setState({ name: event.target.value });
+        }
         break;
       case "Email":
         this.email_error = true;
@@ -168,7 +179,9 @@ class Apply extends Component {
         this.setState({ how_u_find_us: event.target.value });
         break;
       case "looking-for":
-        this.setState({ looking_from_us: event.target.value });
+        if (validator.isLength(event.target.value, { max: 100 })) {
+          this.setState({ looking_from_us: event.target.value });
+        }
         break;
       case "technical-interest":
         this.setState({ technical_interest: event.target.value });
@@ -185,7 +198,7 @@ class Apply extends Component {
       this.state.name.length > 3 &&
       this.state.email.length > 3 &&
       this.state.educationCollege.length > 3 &&
-      this.state.educationCourse.length > 3 &&
+      this.state.educationCourse.length >= 2 &&
       this.state.educationBranch.length >= 2 &&
       this.state.educationYear != null &&
       this.state.personalInfo.length > 3 &&
@@ -251,6 +264,7 @@ class Apply extends Component {
 
   // Function to send the email and for scheduling the interview
   handleSubmit = (event) => {
+    this.isSubmitted = true;
     event.preventDefault();
     let Answer =
       "<b>Q1 Name</b> <br>" +
@@ -308,8 +322,8 @@ class Apply extends Component {
       "<br> <br> <b>Q12 What are your technical interests?</b> <br>" +
       this.state.technical_interest;
 
-    let message =
-      "Thank You for your email " +
+    this.successMessage =
+      "Thank You for applying with us " +
       this.state.name +
       "! We will get back to you within 5 business days";
 
@@ -321,10 +335,9 @@ class Apply extends Component {
     // For emailjs all the credentials are defined on top of the file
     emailjs.send(service_id, template_id, template_params).then(
       (result) => {
-        alert(message);
-        console.log(result.text);
         this.setState(this.baseState); //to set the state to initial value
         event.target.reset(); //reset the form
+        this.handleShow();
       },
       (error) => {
         console.log(error.text);
@@ -342,17 +355,23 @@ class Apply extends Component {
   };
 
   // once the app is loaded then this function is called
-  componentDidMount() {
+  componentWillMount() {
     console.log("Find a bug and the course price is free");
   }
+
+  handleClose = () => this.setState({ show: false });
+  handleShow = () =>{ 
+    this.isSubmitted = false;
+    this.setState({ show: true });
+  };
 
   render() {
     const imp = <span className="required">*</span>;
 
     return (
-      <section id="apply">
+      <section id="apply" data-testid="apply">
         <Slide left duration={1300}>
-          <div className="row education" data-testid="apply">
+          <div className="row education">
             <div className="eight columns header-col">
               <h1>
                 <span>Apply Here</span>
@@ -363,18 +382,15 @@ class Apply extends Component {
               <div className="row item"></div>
             </div>
           </div>
-        </Slide>
 
-        <Slide left duration={1300}>
           <div className="row work" data-testid="form">
             <div className="twelve columns header-col">
               <form onSubmit={this.handleSubmit}>
                 <label>
-                  Name {imp}
+                  Name(only alphabets) {imp}
                   <input
                     data-testid="name"
                     id="Name"
-
                     className="input-text form-control form-control-lg"
                     type="text"
                     value={this.state.name}
@@ -391,7 +407,9 @@ class Apply extends Component {
                     type="text"
                     onChange={this.handleChange}
                   />
-                  { this.email_error ?( <span className="required">Email not valid</span>) : null}
+                  {this.email_error ? (
+                    <span className="required">Email not valid</span>
+                  ) : null}
                 </label>
 
                 <label>
@@ -409,6 +427,7 @@ class Apply extends Component {
                     <label>College{imp}</label>
                     <input
                       id="education_college"
+                      data-testid="college"
                       className="input-text"
                       type="text"
                       value={this.state.educationCollege}
@@ -419,6 +438,7 @@ class Apply extends Component {
                     <input
                       id="education_course"
                       className="input-text"
+                      data-testid="course"
                       type="text"
                       value={this.state.educationCourse}
                       onChange={this.handleChange}
@@ -427,6 +447,7 @@ class Apply extends Component {
                     <label>Branch{imp}</label>
                     <input
                       id="education_branch"
+                      data-testid="branch"
                       className="input-text"
                       type="text"
                       value={this.state.educationBranch}
@@ -434,6 +455,7 @@ class Apply extends Component {
                     />
 
                     <label>year of pass out{imp}</label>
+
                     <DatePicker
                       id="education_year"
                       className="input-number"
@@ -464,6 +486,7 @@ class Apply extends Component {
                   <textarea
                     id="personalInfo"
                     className="input-text"
+                    data-testid="personalInfo"
                     type="text"
                     value={this.state.personalInfo}
                     onChange={this.handleChange}
@@ -555,6 +578,7 @@ class Apply extends Component {
                   LinkedIn profile {imp}
                   <input
                     id="linkedIn"
+                    data-testid="linkedIn"
                     className="input-text"
                     type="text"
                     value={this.state.linkedIn_url}
@@ -566,6 +590,7 @@ class Apply extends Component {
                   What do you know about testing? {imp}
                   <textarea
                     id="testing-knowledge"
+                    data-testid="testing"
                     className="input-text"
                     type="text"
                     value={this.state.about_testing}
@@ -577,6 +602,7 @@ class Apply extends Component {
                   Would you like to start your career in software testing? {imp}
                   <textarea
                     id="software-testing"
+                    data-testid="likeToTesting"
                     className="input-text"
                     type="text"
                     value={this.state.start_testing}
@@ -611,6 +637,7 @@ class Apply extends Component {
                   How did you find out about us? {imp}
                   <input
                     id="find-us"
+                    data-testid="findUs"
                     className="input-text"
                     type="text"
                     value={this.state.how_u_find_us}
@@ -619,9 +646,11 @@ class Apply extends Component {
                 </label>
 
                 <label>
-                  What are you looking for from this program? {imp}
+                  What are you looking for from this program? (max 100 chars)
+                  {imp}
                   <input
                     id="looking-for"
+                    data-testid="lookingFor"
                     className="input-text"
                     type="text"
                     value={this.state.looking_from_us}
@@ -633,6 +662,7 @@ class Apply extends Component {
                   What are your technical interests? {imp}
                   <input
                     id="technical-interest"
+                    data-testid="techInterest"
                     className="input-text"
                     type="text"
                     value={this.state.technical_interest}
@@ -698,25 +728,41 @@ class Apply extends Component {
                     <span className="checkmark"></span>
                   </label>
                 </div>
-                {!this.state.isEnabled ?(
-                  <span className="required">please fill all the required* &nbsp; fields(min 4 characters each) to submit your application <br/> </span> 
-                ): null}
+                {!this.state.isEnabled ? (
+                  <span className="required">
+                    please fill all the required* fields(min 4 characters
+                    each) to submit your application <br />{" "}
+                  </span>
+                ) : null}
 
-                <input
-                  style={{
-                    borderRadius: 5,
-                    marginTop: 10,
-                    width: 100,
-                    padding: 4,
-                  }}
-                  className={!this.state.isEnabled? "disabled" : null}
-                  disabled={!this.state.isEnabled}
-                  type="submit"
-                  value="submit"
-                />
+                
+                {this.isSubmitted ? (
+                  <span id="image-loader">
+                    <img alt="" src="images/loader.gif" />
+                  </span>
+                ) : <input
+                style={{
+                  borderRadius: 5,
+                  marginTop: 10,
+                  width: 100,
+                  padding: 4,
+                }}
+                className={!this.state.isEnabled ? "disabled" : null}
+                disabled={!this.state.isEnabled}
+                type="submit"
+                value="submit"
+              />}
               </form>
             </div>
           </div>
+
+          <Modal
+            title="Application submitted successfully!"
+            visible={this.state.show}
+            onOk={this.handleClose}
+          >
+            <p>{this.successMessage}</p>
+          </Modal>
         </Slide>
       </section>
     );

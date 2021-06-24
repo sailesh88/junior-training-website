@@ -13,7 +13,7 @@ class Program extends Component {
 
   render() {
     return (
-      <section id="program">
+      <section id="program" data-testid="program" >
         <Slide left duration={1300}>
           <div className="row education">
             <div className="eight columns header-col">

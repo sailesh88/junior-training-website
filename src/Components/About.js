@@ -4,7 +4,7 @@ import Fade from "react-reveal";
 class About extends Component {
   render() {
     return (
-      <section id="about">
+      <section id="about" data-testid="about" >
         <Fade duration={1000}>
           <div className="row">
             <div className="row">

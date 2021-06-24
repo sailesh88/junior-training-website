@@ -43,15 +43,17 @@ class Footer extends Component {
     });
 
     return(
-      <footer>
-        <div className="row">
+      <footer style={{
+        paddingBottom : "20px",
+        backgroundColor : "	#000524"
+      }}>
+        <div className="row" id="footer" >
           <Fade bottom>
             <div className="twelve columns">
               <ul className="social-links">{networks}</ul>
 
               <ul className="copyright">
                 <li>&copy;  Qxf2 Services 2013 - 2021</li>
-                
               </ul>
             </div>
           </Fade>

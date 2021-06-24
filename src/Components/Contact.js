@@ -12,8 +12,8 @@ class Contact extends Component {
     const message = "Contact us";
 
     return (
-      <section id="contact">
-        <Fade bottom duration={1000}>
+      <section id="contact" data-testid="contact" >
+        {/* <Fade bottom duration={1000}>
           <div className="row section-head">
             <div className="two columns header-col">
               <h1>
@@ -118,7 +118,7 @@ class Contact extends Component {
               <div className="widget widget_tweets"></div>
             </aside>
           </Slide>
-        </div>
+        </div> */}
       </section>
     );
   }

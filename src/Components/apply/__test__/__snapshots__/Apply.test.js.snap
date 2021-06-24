@@ -2,11 +2,11 @@
 
 exports[`matches snapshot 1`] = `
 <section
+  data-testid="apply"
   id="apply"
 >
   <div
     className="react-reveal row education"
-    data-testid="apply"
     style={
       Object {
         "opacity": undefined,
@@ -46,7 +46,7 @@ exports[`matches snapshot 1`] = `
         onSubmit={[Function]}
       >
         <label>
-          Name 
+          Name(only alphabets) 
           <span
             className="required"
           >
@@ -132,6 +132,7 @@ exports[`matches snapshot 1`] = `
                 </label>
                 <input
                   className="input-text"
+                  data-testid="college"
                   id="education_college"
                   onChange={[Function]}
                   type="text"
@@ -147,6 +148,7 @@ exports[`matches snapshot 1`] = `
                 </label>
                 <input
                   className="input-text"
+                  data-testid="course"
                   id="education_course"
                   onChange={[Function]}
                   type="text"
@@ -162,6 +164,7 @@ exports[`matches snapshot 1`] = `
                 </label>
                 <input
                   className="input-text"
+                  data-testid="branch"
                   id="education_branch"
                   onChange={[Function]}
                   type="text"
@@ -217,6 +220,7 @@ exports[`matches snapshot 1`] = `
           </span>
           <textarea
             className="input-text"
+            data-testid="personalInfo"
             id="personalInfo"
             onChange={[Function]}
             type="text"
@@ -258,6 +262,7 @@ exports[`matches snapshot 1`] = `
           </span>
           <input
             className="input-text"
+            data-testid="linkedIn"
             id="linkedIn"
             onChange={[Function]}
             type="text"
@@ -273,6 +278,7 @@ exports[`matches snapshot 1`] = `
           </span>
           <textarea
             className="input-text"
+            data-testid="testing"
             id="testing-knowledge"
             onChange={[Function]}
             type="text"
@@ -288,6 +294,7 @@ exports[`matches snapshot 1`] = `
           </span>
           <textarea
             className="input-text"
+            data-testid="likeToTesting"
             id="software-testing"
             onChange={[Function]}
             type="text"
@@ -328,7 +335,7 @@ exports[`matches snapshot 1`] = `
                   aria-autocomplete="list"
                   className="css-wmatm6-dummyInput-DummyInput"
                   disabled={false}
-                  id="react-select-8-input"
+                  id="react-select-9-input"
                   onBlur={[Function]}
                   onChange={[Function]}
                   onFocus={[Function]}
@@ -390,6 +397,7 @@ exports[`matches snapshot 1`] = `
           </span>
           <input
             className="input-text"
+            data-testid="findUs"
             id="find-us"
             onChange={[Function]}
             type="text"
@@ -397,7 +405,7 @@ exports[`matches snapshot 1`] = `
           />
         </label>
         <label>
-          What are you looking for from this program? 
+          What are you looking for from this program? (max 100 chars)
           <span
             className="required"
           >
@@ -405,6 +413,7 @@ exports[`matches snapshot 1`] = `
           </span>
           <input
             className="input-text"
+            data-testid="lookingFor"
             id="looking-for"
             onChange={[Function]}
             type="text"
@@ -420,6 +429,7 @@ exports[`matches snapshot 1`] = `
           </span>
           <input
             className="input-text"
+            data-testid="techInterest"
             id="technical-interest"
             onChange={[Function]}
             type="text"
@@ -535,13 +545,20 @@ exports[`matches snapshot 1`] = `
             />
           </label>
         </div>
+        <span
+          className="required"
+        >
+          please fill all the required* fields(min 4 characters each) to submit your application 
+          <br />
+           
+        </span>
         <input
+          className="disabled"
           disabled={true}
           style={
             Object {
-              "backgroundColor": "grey",
               "borderRadius": 5,
-              "marginTop": 30,
+              "marginTop": 10,
               "padding": 4,
               "width": 100,
             }
@@ -552,5 +569,13 @@ exports[`matches snapshot 1`] = `
       </form>
     </div>
   </div>
+  <div
+    className="react-reveal"
+    style={
+      Object {
+        "opacity": undefined,
+      }
+    }
+  />
 </section>
 `;

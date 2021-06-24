@@ -4,7 +4,7 @@ import Fade from "react-reveal";
 class BeforeApply extends Component {
   render() {
     return (
-      <section id="before-you-apply">
+      <section id="before-you-apply" data-testid="before-you-apply" >
         <Fade left duration={1000} distance="40px">
           <div className="row">
             <Fade bottom>

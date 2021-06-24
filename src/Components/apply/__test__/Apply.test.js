@@ -44,7 +44,7 @@ it("Email input should accept text", () => {
 
   const errorMsgNode = getByText("Email not valid");
 
-  // // to check the email validation fails 
+  // to check the email validation fails 
   expect(errorMsgNode).toBeInTheDocument();
 
   fireEvent.change(inputEmailNode, { target: { value: "testing@domain.com" } });
@@ -62,6 +62,39 @@ it("Should be able to submit the form", () => {
   expect(mockFn).toHaveBeenCalledTimes(0);
 });
 
+it("Test", () => {
+
+  const { getByTestId, getByText } = render(<Apply/>);
+  let inputProps = [
+    { testId: "email", val :"testing" },
+    { testId: "name", val :"Sailesh" },
+    { testId: "college", val :"collegeName" },
+    { testId: "course", val :"MS" },
+    { testId: "branch", val :"EEE" },
+    // { testId: "year", val :"2021" },
+    { testId: "personalInfo", val :"I am a developer" },
+    // college project
+    { testId: "linkedIn", val :"some URl" },
+    { testId: "testing", val :"none" },
+    { testId: "likeToTesting", val :"yes I would" },
+    // for level of languages
+    { testId: "findUs", val :"online" },
+    { testId: "lookingFor", val :"testing exp" },
+    { testId: "techInterest", val :"some interest" },
+  ];
+  inputProps.forEach((node) =>{
+    const inputNode = getByTestId(node.testId);
+    fireEvent.change(inputNode, { target: { value: node.val } });
+  });
+  
+  const errorMsgNode = getByText("please fill all the required* fields(min 4 characters each) to submit your application");
+
+
+  // to check the email validation passes
+  expect(errorMsgNode).toBeInTheDocument();
+
+  
+});
 
 it("matches snapshot", () =>{
   const tree = renderer.create(<Apply></Apply>).toJSON();

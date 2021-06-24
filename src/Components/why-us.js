@@ -4,7 +4,7 @@ import Fade from "react-reveal";
 class WhyUs extends Component {
   render() {
     return (
-      <section id="why-us">
+      <section id="why-us" data-testid="why-us" >
         <Fade left duration={1000} distance="40px">
           <div className="row">
             <Fade bottom>

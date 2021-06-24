@@ -24,7 +24,7 @@ class App extends Component {
         <About />
         <BeforeApply />
         <Apply />
-        <Contact />
+        {/* <Contact /> */}
         <Footer />
       </div>
     );
