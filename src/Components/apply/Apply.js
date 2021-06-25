@@ -78,7 +78,7 @@ class Apply extends Component {
     //This variable is to define initial state which will be used once the form is submitted successfully
     this.baseState = this.state;
 
-    // message for successfully submitting the application 
+    // message for successfully submitting the application
     this.successMessage = "";
 
     this.handleChange = this.handleChange.bind(this);
@@ -265,7 +265,8 @@ class Apply extends Component {
   // Function to send the email and for scheduling the interview
   handleSubmit = (event) => {
     this.isSubmitted = true;
-    event.preventDefault();
+
+    // event.preventDefault();
     let Answer =
       "<b>Q1 Name</b> <br>" +
       this.state.name +
@@ -332,37 +333,45 @@ class Apply extends Component {
       answers: Answer,
     };
 
-    // For emailjs all the credentials are defined on top of the file
-    emailjs.send(service_id, template_id, template_params).then(
-      (result) => {
-        this.setState(this.baseState); //to set the state to initial value
-        event.target.reset(); //reset the form
-        this.handleShow();
-      },
-      (error) => {
-        console.log(error.text);
-      }
-    );
+    if (this.state.isEnabled) {
+      // For emailjs all the credentials are defined on top of the file
+      emailjs.send(service_id, template_id, template_params).then(
+        (result) => {
+          this.setState(this.baseState); //to set the state to initial value
+          event.target.reset(); //reset the form
+          this.handleShow();
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
 
-    // For getting the API response
-    axios.get(URL_Interview).then((res) => {
-      if (res.status === true) {
-        const persons = res.data;
-        this.setState({ persons });
-      }
-    });
-    console.log(this.state.persons);
+      // For getting the API response
+      axios.get(URL_Interview).then((res) => {
+        if (res.status === 200) {
+          const persons = res.data;
+          // this.setState({ persons });
+        }
+      });
+    }
   };
 
   // once the app is loaded then this function is called
-  componentWillMount() {
+  componentDidMount() {
     console.log("Find a bug and the course price is free");
   }
 
   handleClose = () => this.setState({ show: false });
-  handleShow = () =>{ 
+
+  handleShow = () => {
     this.isSubmitted = false;
     this.setState({ show: true });
+    console.log(this.isSubmitted);
+  };
+
+  handleCancel = () => {
+    this.isSubmitted = false;
+    this.setState({ show: false });
   };
 
   render() {
@@ -416,7 +425,7 @@ class Apply extends Component {
                   Enter all your education detail expanding the Education{imp}
                 </label>
 
-                <Collapsible className="collapsible" trigger="Education">
+                <Collapsible  trigger={<a href="">Education</a>}>
                   <div
                     style={{
                       display: "flex",
@@ -730,28 +739,29 @@ class Apply extends Component {
                 </div>
                 {!this.state.isEnabled ? (
                   <span className="required">
-                    please fill all the required* fields(min 4 characters
-                    each) to submit your application <br />{" "}
+                    please fill all the required* fields(min 4 characters each)
+                    to submit your application <br />{" "}
                   </span>
                 ) : null}
 
-                
                 {this.isSubmitted ? (
                   <span id="image-loader">
                     <img alt="" src="images/loader.gif" />
                   </span>
-                ) : <input
-                style={{
-                  borderRadius: 5,
-                  marginTop: 10,
-                  width: 100,
-                  padding: 4,
-                }}
-                className={!this.state.isEnabled ? "disabled" : null}
-                disabled={!this.state.isEnabled}
-                type="submit"
-                value="submit"
-              />}
+                ) : (
+                  <input
+                    style={{
+                      borderRadius: 5,
+                      marginTop: 10,
+                      width: 100,
+                      padding: 4,
+                    }}
+                    className={!this.state.isEnabled ? "disabled" : null}
+                    disabled={!this.state.isEnabled}
+                    type="submit"
+                    value="submit"
+                  />
+                )}
               </form>
             </div>
           </div>
@@ -760,6 +770,7 @@ class Apply extends Component {
             title="Application submitted successfully!"
             visible={this.state.show}
             onOk={this.handleClose}
+            onCancel={this.handleCancel}
           >
             <p>{this.successMessage}</p>
           </Modal>

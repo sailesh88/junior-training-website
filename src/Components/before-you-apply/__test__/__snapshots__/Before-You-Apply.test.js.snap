@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`before-you-apply.js file matches snapshot 1`] = `
+<section
+  data-testid="before-you-apply"
+  id="before-you-apply"
+>
+  <div
+    className="react-reveal row"
+    style={
+      Object {
+        "opacity": undefined,
+      }
+    }
+  >
+    <h4
+      className="react-reveal"
+      style={
+        Object {
+          "opacity": undefined,
+        }
+      }
+    >
+      Before you apply!
+    </h4>
+    <div
+      className="twelve columns collapsed"
+    >
+      <div
+        className="bgrid-quarters s-bgrid-thirds cf"
+      >
+        <ul>
+          <li>
+             Fully remote 
+          </li>
+          <li>
+             Not for everyone 
+          </li>
+          <li>
+             Fast pace - we will not wait for you 
+          </li>
+          <li>
+             No placement guarantee 
+          </li>
+          <li>
+             No money back 
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+`;

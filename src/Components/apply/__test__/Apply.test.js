@@ -89,14 +89,13 @@ it("Test", () => {
   
   const errorMsgNode = getByText("please fill all the required* fields(min 4 characters each) to submit your application");
 
-
   // to check the email validation passes
   expect(errorMsgNode).toBeInTheDocument();
 
   
 });
 
-it("matches snapshot", () =>{
+it("Apply.js matches snapshot", () =>{
   const tree = renderer.create(<Apply></Apply>).toJSON();
   expect(tree).toMatchSnapshot();
 });

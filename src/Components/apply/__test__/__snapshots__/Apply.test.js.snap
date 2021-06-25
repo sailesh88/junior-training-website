@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`matches snapshot 1`] = `
+exports[`Apply.js matches snapshot 1`] = `
 <section
   data-testid="apply"
   id="apply"
@@ -85,7 +85,7 @@ exports[`matches snapshot 1`] = `
           </span>
         </label>
         <div
-          className="Collapsible collapsible"
+          className="Collapsible"
         >
           <span
             className="Collapsible__trigger is-closed"
@@ -94,7 +94,11 @@ exports[`matches snapshot 1`] = `
             style={null}
             tabIndex={null}
           >
-            Education
+            <a
+              href=""
+            >
+              Education
+            </a>
           </span>
           <div
             className="Collapsible__contentOuter"

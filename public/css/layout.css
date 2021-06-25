@@ -1070,6 +1070,7 @@ footer .social-links li:first-child {
 }
 
 .Collapsible {
+  
   border-left: 2px solid black;
   font-family: "opensans-semibold", sans-serif;
   color: #0d0d0d;
@@ -1086,10 +1087,10 @@ footer .social-links li:first-child {
   font-family: "opensans-semibold", sans-serif;
   font-weight: bold;
   font-size: 15px;
-  background-color: lightgrey;
+  background-color: #bcbcbc;
   padding: 15px;
   border-radius: 10px;
-  box-shadow: 0 0 10px 0px rgba(0,0,0,0.2);
+  box-shadow: 0 10px 10px 0 rgba(0,0,0,0.5);
   cursor:pointer;
 }
 

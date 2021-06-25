@@ -2,16 +2,15 @@ import React from "react";
 import ReactDOM from "react-dom";
 import Header from "./Components/Header";
 import Footer from "./Components/Footer";
-import Contact from "./Components/Contact";
-import Benefits from "./Components/Benefits";
-import WhyUs from "./Components/why-us";
-import Eligibility from "./Components/Eligibility-Criteria";
-import Program from "./Components/Program-Details";
-import About from "./Components/About";
-import BeforeApply from "./Components/Before-You-Apply";
+import Benefits from "./Components/benefits/Benefits";
+import WhyUs from "./Components/why-us/why-us";
+import Eligibility from "./Components/eligibility-criteria/Eligibility-Criteria";
+import Program from "./Components/program-details/Program-Details";
+import About from "./Components/about/About";
+import BeforeApply from "./Components/before-you-apply/Before-You-Apply";
 import App from "./App";
 
-import { render, cleanup, fireEvent, getByText } from '@testing-library/react';
+import { render, cleanup } from '@testing-library/react';
 import "@testing-library/jest-dom/extend-expect";
 
 afterEach(cleanup);
@@ -70,11 +69,11 @@ it("checking the section Benefits exists", () => {
   ReactDOM.unmountComponentAtNode(div);
 });
 
-it("checking the section Contact exists", () => {
-  const div = document.createElement("div");
-  ReactDOM.render(<Contact />, div);
-  ReactDOM.unmountComponentAtNode(div);
-});
+// it("checking the section Contact exists", () => {
+//   const div = document.createElement("div");
+//   ReactDOM.render(<Contact />, div);
+//   ReactDOM.unmountComponentAtNode(div);
+// });
 
 it("Check for the Navigation", () => {
 

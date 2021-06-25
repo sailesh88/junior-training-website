@@ -1,0 +1,64 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Eligibility-criteria.js matches snapshot 1`] = `
+<section
+  data-testid="eligibility"
+  id="eligibility"
+>
+  <div
+    className="react-reveal row education"
+    style={
+      Object {
+        "opacity": undefined,
+      }
+    }
+  >
+    <div
+      className="eight columns header-col"
+    >
+      <h1>
+        <span>
+          Eligibility Criteria
+        </span>
+      </h1>
+    </div>
+    <div
+      className="nine columns main-col"
+    >
+      <div
+        className="row item"
+      />
+    </div>
+  </div>
+  <div
+    className="react-reveal row work"
+    style={
+      Object {
+        "opacity": undefined,
+      }
+    }
+  >
+    <div
+      className="twelve columns header-col"
+    >
+      <h1>
+        <ul>
+          <li>
+            Fast pace - not for everyone 
+          </li>
+          <li>
+            Should have done a project outside of college 
+          </li>
+          <li>
+            Should have a GitHub profile or a hardware project video
+             
+          </li>
+          <li>
+            2021 pass outs 
+          </li>
+        </ul>
+      </h1>
+    </div>
+  </div>
+</section>
+`;

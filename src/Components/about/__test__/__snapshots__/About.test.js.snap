@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`About.js matches snapshot 1`] = `
+<section
+  data-testid="about"
+  id="about"
+>
+  <div
+    className="react-reveal row"
+    style={
+      Object {
+        "opacity": undefined,
+      }
+    }
+  >
+    <div
+      className="row"
+    >
+      <h2>
+        <a
+          href="https://qxf2.com/"
+        >
+          Qxf2 Services
+        </a>
+      </h2>
+    </div>
+  </div>
+</section>
+`;

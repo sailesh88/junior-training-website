@@ -1,0 +1,199 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Benefits.js matches snapshot 1`] = `
+<section
+  data-testid="benefits"
+  id="benefits"
+>
+  <div
+    className="react-reveal row"
+    style={
+      Object {
+        "opacity": undefined,
+      }
+    }
+  >
+    <div
+      className="row"
+    >
+      <h6>
+         
+        Why join?
+        <hr />
+        <ul
+          style={
+            Object {
+              "fontSize": 14,
+              "paddingLeft": 50,
+            }
+          }
+        >
+          <li>
+            <span
+              style={
+                Object {
+                  "color": "green",
+                }
+              }
+            >
+              ✔
+               
+            </span>
+            How to test software
+          </li>
+          <li>
+             
+            <span
+              style={
+                Object {
+                  "color": "green",
+                }
+              }
+            >
+              ✔
+               
+            </span>
+            Hands on testing experience
+          </li>
+          <li>
+             
+            <span
+              style={
+                Object {
+                  "color": "green",
+                }
+              }
+            >
+              ✔
+               
+            </span>
+            Test real applications
+          </li>
+          <li>
+             
+            <span
+              style={
+                Object {
+                  "color": "green",
+                }
+              }
+            >
+              ✔
+               
+            </span>
+            Participate in Agile rituals
+          </li>
+          <li>
+             
+            <span
+              style={
+                Object {
+                  "color": "green",
+                }
+              }
+            >
+              ✔
+               
+            </span>
+            Interact with real testers
+          </li>
+          <li>
+             
+            <span
+              style={
+                Object {
+                  "color": "green",
+                }
+              }
+            >
+              ✔
+               
+            </span>
+            Tools for testing
+            <ul>
+              <li>
+                - GitHub Actions
+              </li>
+              <li>
+                - JavaScript and Python
+              </li>
+              <li>
+                - Test automation -
+                &gt;
+                 Selenium, Appium, BrowserStack, API, postman
+              </li>
+              <li>
+                - Test reporting tools - reportportal
+              </li>
+              <li>
+                - Test case management tools
+              </li>
+              <li>
+                - git, GitHub
+              </li>
+              <li>
+                - Jira
+              </li>
+            </ul>
+          </li>
+          <li>
+            <span
+              style={
+                Object {
+                  "color": "green",
+                }
+              }
+            >
+              ✔
+               
+            </span>
+            Interview training
+          </li>
+          <li>
+             
+            <span
+              style={
+                Object {
+                  "color": "green",
+                }
+              }
+            >
+              ✔
+               
+            </span>
+            Resume reviews
+          </li>
+          <li>
+             
+            <span
+              style={
+                Object {
+                  "color": "green",
+                }
+              }
+            >
+              ✔
+               
+            </span>
+            Weekly talks (better phrasing needed here)
+          </li>
+          <li>
+             
+            <span
+              style={
+                Object {
+                  "color": "green",
+                }
+              }
+            >
+              ✔
+               
+            </span>
+            Open source contribution
+          </li>
+        </ul>
+      </h6>
+    </div>
+  </div>
+</section>
+`;

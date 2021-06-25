@@ -1,0 +1,56 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Why-us.js matches snapshot 1`] = `
+<section
+  data-testid="why-us"
+  id="why-us"
+>
+  <div
+    className="react-reveal row"
+    style={
+      Object {
+        "opacity": undefined,
+      }
+    }
+  >
+    <h4
+      className="react-reveal"
+      style={
+        Object {
+          "opacity": undefined,
+        }
+      }
+    >
+      Why us?
+    </h4>
+    <div
+      className="twelve columns collapsed"
+    >
+      <div
+        className="bgrid-quarters s-bgrid-thirds cf"
+      >
+        <ul>
+          <li>
+             Professional testers teach you 
+          </li>
+          <li>
+             No spoonfeeding 
+          </li>
+          <li>
+             Practical ... not theoretical 
+          </li>
+          <li>
+             No school like approach 
+          </li>
+          <li>
+             No syllabus or book knowledge 
+          </li>
+          <li>
+             Real application 
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+`;
