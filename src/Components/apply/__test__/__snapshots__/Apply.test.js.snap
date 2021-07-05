@@ -74,6 +74,7 @@ exports[`Apply.js matches snapshot 1`] = `
             id="Email"
             onChange={[Function]}
             type="text"
+            value=""
           />
         </label>
         <label>
@@ -174,7 +175,9 @@ exports[`Apply.js matches snapshot 1`] = `
                   type="text"
                   value=""
                 />
-                <label>
+                <label
+                  data-testid="year"
+                >
                   year of pass out
                   <span
                     className="required"
@@ -189,7 +192,7 @@ exports[`Apply.js matches snapshot 1`] = `
                     className="react-datepicker__input-container"
                   >
                     <input
-                      className="input-number"
+                      className="input-text"
                       disabled={false}
                       id="education_year"
                       onBlur={[Function]}
@@ -197,6 +200,7 @@ exports[`Apply.js matches snapshot 1`] = `
                       onClick={[Function]}
                       onFocus={[Function]}
                       onKeyDown={[Function]}
+                      placeholder="Select Year"
                       readOnly={false}
                       type="text"
                       value="2021"
@@ -242,20 +246,25 @@ exports[`Apply.js matches snapshot 1`] = `
           <div
             onChange={[Function]}
           >
-            <input
-              name="college-projects"
-              type="radio"
-              value="yes"
-            />
-            Yes
-            <br />
-            <input
-              name="college-projects"
-              type="radio"
-              value="no"
-            />
-             No
+            <label>
+              <input
+                name="college-projects"
+                type="radio"
+                value="yes"
+              />
+                Yes
+            </label>
+            <label>
+              <input
+                name="college-projects"
+                type="radio"
+                value="no"
+              />
+               
+                No
+            </label>
           </div>
+          <br />
         </label>
         <label>
           LinkedIn profile 
@@ -305,77 +314,50 @@ exports[`Apply.js matches snapshot 1`] = `
             value=""
           />
         </label>
-        <label>
-          Level of programming
-          <span
-            className="required"
+        <label
+          data-testid="programs"
+          for="selectId"
+          style={
+            Object {
+              "width": "fit-content",
+            }
+          }
+        >
+          <label
+            htmlFor="programs"
           >
-            *
-          </span>
-          <div
-            className="input-select css-2b097c-container"
-            onKeyDown={[Function]}
-          >
+            Level of programming 
             <span
-              aria-atomic="false"
-              aria-live="polite"
-              aria-relevant="additions text"
-              className="css-1f43avz-a11yText-A11yText"
-            />
-            <div
-              className=" css-yk16xz-control"
-              onMouseDown={[Function]}
-              onTouchEnd={[Function]}
+              className="required"
             >
-              <div
-                className=" css-g1d714-ValueContainer"
-              >
-                <div
-                  className=" css-1wa3eu0-placeholder"
-                >
-                  Select...
-                </div>
-                <input
-                  aria-autocomplete="list"
-                  className="css-wmatm6-dummyInput-DummyInput"
-                  disabled={false}
-                  id="react-select-9-input"
-                  onBlur={[Function]}
-                  onChange={[Function]}
-                  onFocus={[Function]}
-                  readOnly={true}
-                  tabIndex="0"
-                  value=""
-                />
-              </div>
-              <div
-                className=" css-1hb7zxy-IndicatorsContainer"
-              >
-                <span
-                  className=" css-1okebmr-indicatorSeparator"
-                />
-                <div
-                  aria-hidden="true"
-                  className=" css-tlfecz-indicatorContainer"
-                  onMouseDown={[Function]}
-                  onTouchEnd={[Function]}
-                >
-                  <svg
-                    aria-hidden="true"
-                    className="css-tj5bde-Svg"
-                    focusable="false"
-                    height={20}
-                    viewBox="0 0 20 20"
-                    width={20}
-                  >
-                    <path
-                      d="M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z"
-                    />
-                  </svg>
-                </div>
-              </div>
-            </div>
-          </div>
+              *
+            </span>
+          </label>
+          <select
+            data-testid="select"
+            defaultValue="Select...."
+            id="selectId"
+            onChange={[Function]}
+          >
+            <option
+              data-testid="select-option"
+              value="beginner"
+            >
+              Beginner
+            </option>
+            <option
+              data-testid="select-option"
+              value="intermediate"
+            >
+              Intermediate
+            </option>
+            <option
+              data-testid="select-option"
+              value="expert"
+            >
+              Expert
+            </option>
+          </select>
         </label>
         <label>
           What languages do you code in? 
@@ -386,6 +368,7 @@ exports[`Apply.js matches snapshot 1`] = `
           </span>
           <input
             className="input-text"
+            data-testid="programmingLang"
             id="languages"
             onChange={[Function]}
             type="text"
@@ -446,6 +429,7 @@ exports[`Apply.js matches snapshot 1`] = `
         <div>
           <label
             className="container"
+            data-testid="check1"
           >
             fully remote
              
@@ -466,6 +450,7 @@ exports[`Apply.js matches snapshot 1`] = `
           </label>
           <label
             className="container"
+            data-testid="check2"
           >
              
             not for everyone
@@ -487,6 +472,7 @@ exports[`Apply.js matches snapshot 1`] = `
           </label>
           <label
             className="container"
+            data-testid="check3"
           >
              
             fast paced
@@ -508,6 +494,7 @@ exports[`Apply.js matches snapshot 1`] = `
           </label>
           <label
             className="container"
+            data-testid="check4"
           >
              
             no placement guarantee
@@ -529,6 +516,7 @@ exports[`Apply.js matches snapshot 1`] = `
           </label>
           <label
             className="container"
+            data-testid="check5"
           >
              
             no money back
@@ -558,6 +546,7 @@ exports[`Apply.js matches snapshot 1`] = `
         </span>
         <input
           className="disabled"
+          data-testid="submit"
           disabled={true}
           style={
             Object {

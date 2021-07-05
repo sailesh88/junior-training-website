@@ -150,11 +150,10 @@ header .scrolldown a:hover {
   background-color: #333;
 }
 
-.logo{
+.logo {
   display: flex;
   align-items: center;
 }
-
 
 /* hide toggle button */
 #nav-wrap > a.mobile-btn {
@@ -231,7 +230,6 @@ ul#nav li.current a {
   color: #fff;
   margin-bottom: 12px;
 }
-
 
 #benefits li,
 #benefits h6,
@@ -892,7 +890,6 @@ call-to-action .button {
   margin-right: 10px;
 }
 #image-loader {
-  
   position: relative;
   left: 25px;
   top: 0;
@@ -920,7 +917,7 @@ call-to-action .button {
 /* i. Footer
 /* ------------------------------------------------------------------ */
 
-footer{
+footer {
   padding-top: 48px;
   margin-bottom: 48px;
   color: #303030;
@@ -1032,6 +1029,13 @@ footer .social-links li:first-child {
   width: 100%;
   border-radius: 10px;
   padding: inline 10spx;
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+                                supported by Chrome, Opera and Firefox */
 }
 
 .input-number {
@@ -1070,7 +1074,6 @@ footer .social-links li:first-child {
 }
 
 .Collapsible {
-  
   border-left: 2px solid black;
   font-family: "opensans-semibold", sans-serif;
   color: #0d0d0d;
@@ -1080,7 +1083,6 @@ footer .social-links li:first-child {
   border-radius: 10px;
   margin-top: 10px;
   margin-bottom: 50px;
-  
 }
 
 .Collapsible__trigger {
@@ -1090,8 +1092,8 @@ footer .social-links li:first-child {
   background-color: #bcbcbc;
   padding: 15px;
   border-radius: 10px;
-  box-shadow: 0 10px 10px 0 rgba(0,0,0,0.5);
-  cursor:pointer;
+  box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.5);
+  cursor: pointer;
 }
 
 /* Customize the label (the container) */
@@ -1168,4 +1170,57 @@ footer .social-links li:first-child {
 .required {
   font-weight: bold;
   color: red;
+}
+
+select {
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -webkit-padding-end: 30px;
+  -moz-padding-end: 30px;
+  -webkit-padding-start: 2px;
+  -moz-padding-start: 2px;
+  background-color: #bcbcbc; /* Fallback color if gradients are not supported */
+  background-image: url(../images/select-arrow.png),
+    -webkit-linear-gradient(top, #e5e5e5, #f4f4f4); /* For Chrome and Safari */
+  background-image: url(../images/select-arrow.png),
+    -moz-linear-gradient(top, #e5e5e5, #f4f4f4); /* For old Firefox (3.6 to 15) */
+  background-image: url(../images/select-arrow.png),
+    -ms-linear-gradient(top, #e5e5e5, #f4f4f4); /* For pre-releases of Internet Explorer  10*/
+  background-image: url(../images/select-arrow.png),
+    -o-linear-gradient(top, #e5e5e5, #f4f4f4); /* For old Opera (11.1 to 12.0) */
+  background-image: url(../images/select-arrow.png),
+    linear-gradient(to bottom, #e5e5e5, #f4f4f4); /* Standard syntax; must be last */
+  background-position: center right;
+  background-repeat: no-repeat;
+  border: 0.5px solid #aaa;
+  border-radius: 5px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+  color: #555;
+  font-size: inherit;
+  margin: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding: 10px 5px;
+  font-size-adjust: 0.6;
+}
+
+option {
+  font-size: inherit;
+  background-color: #ffffff;
+}
+
+option:before {
+  content: ">";
+  font-size: 20px;
+  display: none;
+  padding-right: 10px;
+  padding-left: 5px;
+  color: #fff;
+}
+
+option:hover:before {
+  display: inline;
 }

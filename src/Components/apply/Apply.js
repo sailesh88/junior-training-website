@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import Slide from "react-reveal";
 import validator from "validator";
-import Select from "react-select";
 import emailjs, { init } from "emailjs-com";
 import axios from "axios";
 import DatePicker from "react-datepicker";
@@ -9,13 +8,7 @@ import Collapsible from "react-collapsible";
 import "react-datepicker/dist/react-datepicker.css";
 
 import { Modal } from "antd";
-import "antd/dist/antd.css"; // or 'antd/dist/antd.less'
-
-const options = [
-  { value: "beginner", label: "Beginner" },
-  { value: "intermediate", label: "Intermediate" },
-  { value: "Expert", label: "Expert" },
-];
+import "antd/dist/antd.css";
 
 var rand = Math.random().toString(36).split(".")[1].slice(0, 8) + "";
 var year = new Date().getFullYear();
@@ -51,14 +44,13 @@ class Apply extends Component {
       linkedIn_url: "",
       about_testing: "",
       start_testing: "",
-      selectedOption: null,
       programming_level: "",
       programming_language: "",
       how_u_find_us: "",
       technical_interest: "",
       looking_from_us: "",
       isEnabled: false,
-      show: false,
+      confirm: false,
     };
 
     // this is for the checkboxes at the bottom of the form
@@ -86,6 +78,7 @@ class Apply extends Component {
     this.onRadioChange = this.onRadioChange.bind(this);
     this.handleInputChange = this.handleInputChange.bind(this);
     this.handleSelectChange = this.handleSelectChange.bind(this);
+    this.handleChangeSelect = this.handleChangeSelect.bind(this);
   }
 
   // function for handling the select options
@@ -130,10 +123,10 @@ class Apply extends Component {
         }
         break;
       case "Email":
+        this.setState({ email: event.target.value });
         this.email_error = true;
         if (validator.isEmail(event.target.value)) {
           this.email_error = false;
-          this.setState({ email: event.target.value });
         }
         break;
       case "education_college":
@@ -168,9 +161,6 @@ class Apply extends Component {
         break;
       case "software-testing":
         this.setState({ start_testing: event.target.value });
-        break;
-      case "programming_level":
-        this.setState({ programming_level: event.target.value });
         break;
       case "languages":
         this.setState({ programming_language: event.target.value });
@@ -262,9 +252,19 @@ class Apply extends Component {
     this.setButton();
   };
 
-  // Function to send the email and for scheduling the interview
+  handleChangeSelect = (value) => {
+    this.setState({ programming_level: value });
+    this.setButton();
+  };
+
   handleSubmit = (event) => {
-    this.isSubmitted = true;
+    event.preventDefault();
+    this.handleShowSubmit();
+  };
+
+  // Function to send the email and for scheduling the interview
+  confirmSubmission() {
+    // this.isSubmitted = true;
 
     // event.preventDefault();
     let Answer =
@@ -313,7 +313,7 @@ class Apply extends Component {
       "<br> <br> <b>Q8 Would you like to start your career in software testing?</b> <br>" +
       this.state.start_testing +
       "<br> <br> <b>Q9 Level of programming</b> <br>" +
-      this.state.programming_level.label +
+      this.state.programming_level +
       "<br> <br> <b>Q9.1 What languages do you code in?</b> <br>" +
       this.state.programming_language +
       "<br> <br> <b>Q10 How did you find out about us?</b> <br>" +
@@ -337,9 +337,12 @@ class Apply extends Component {
       // For emailjs all the credentials are defined on top of the file
       emailjs.send(service_id, template_id, template_params).then(
         (result) => {
-          this.setState(this.baseState); //to set the state to initial value
-          event.target.reset(); //reset the form
-          this.handleShow();
+          Modal.success({
+            content: this.successMessage,
+            onOk: async () => {
+              window.location.reload(true);
+            },
+          });
         },
         (error) => {
           console.log(error.text);
@@ -353,33 +356,37 @@ class Apply extends Component {
           // this.setState({ persons });
         }
       });
+    } else {
+      this.isSubmitted = false;
+      Modal.error({
+        content:
+          "You need to fill all the req. fields(min 4 chars) in the application",
+      });
     }
-  };
+  }
 
   // once the app is loaded then this function is called
   componentDidMount() {
     console.log("Find a bug and the course price is free");
   }
 
-  handleClose = () => this.setState({ show: false });
-
-  handleShow = () => {
-    this.isSubmitted = false;
-    this.setState({ show: true });
-    console.log(this.isSubmitted);
+  handleCloseSubmit = () => {
+    this.setState({ confirm: false });
+    this.isSubmitted = true;
+    this.confirmSubmission();
   };
 
-  handleCancel = () => {
-    this.isSubmitted = false;
-    this.setState({ show: false });
+  handleShowSubmit = () => {
+    this.setState({ confirm: true });
+    this.setButton();
   };
+  handleCancelSubmit = () => this.setState({ confirm: false });
 
   render() {
     const imp = <span className="required">*</span>;
 
     return (
       <section id="apply" data-testid="apply">
-        <Slide left duration={1300}>
           <div className="row education">
             <div className="eight columns header-col">
               <h1>
@@ -403,6 +410,7 @@ class Apply extends Component {
                     className="input-text form-control form-control-lg"
                     type="text"
                     value={this.state.name}
+                    ref={this.state.name}
                     onChange={this.handleChange}
                   />
                 </label>
@@ -414,6 +422,8 @@ class Apply extends Component {
                     id="Email"
                     className="input-text"
                     type="text"
+                    value={this.state.email}
+                    ref={this.state.email}
                     onChange={this.handleChange}
                   />
                   {this.email_error ? (
@@ -425,7 +435,7 @@ class Apply extends Component {
                   Enter all your education detail expanding the Education{imp}
                 </label>
 
-                <Collapsible  trigger={<a href="">Education</a>}>
+                <Collapsible trigger={<a href="">Education</a>}>
                   <div
                     style={{
                       display: "flex",
@@ -440,6 +450,7 @@ class Apply extends Component {
                       className="input-text"
                       type="text"
                       value={this.state.educationCollege}
+                      ref={this.state.educationCollege}
                       onChange={this.handleChange}
                     />
 
@@ -463,18 +474,20 @@ class Apply extends Component {
                       onChange={this.handleChange}
                     />
 
-                    <label>year of pass out{imp}</label>
+                    <label data-testid="year">year of pass out{imp}</label>
 
                     <DatePicker
+                      placeholderText="Select Year"
                       id="education_year"
-                      className="input-number"
+                      
+                      className="input-text"
                       selected={this.state.educationYear}
                       onChange={(date) =>
                         this.setState({ educationYear: date })
                       }
+                      showYearPicker
                       minDate={new Date(year - 3, 0, 1)}
                       maxDate={new Date(year + 3, 11, 31)}
-                      showYearPicker
                       dateFormat="yyyy"
                       yearItemNumber={10}
                     />
@@ -506,11 +519,17 @@ class Apply extends Component {
                   Have you done any projects outside of college? {imp}
                   <br />
                   <div onChange={this.onRadioChange}>
-                    <input type="radio" value="yes" name="college-projects" />
-                    Yes
-                    <br />
-                    <input type="radio" value="no" name="college-projects" /> No
+                    <label>
+                      <input type="radio" value="yes" name="college-projects" />
+                      &nbsp; Yes
+                    </label>
+
+                    <label>
+                      <input type="radio" value="no" name="college-projects" />{" "}
+                      &nbsp; No
+                    </label>
                   </div>
+                  <br />
                 </label>
                 {this.state.isCollegeProject && (
                   <div>
@@ -619,23 +638,37 @@ class Apply extends Component {
                   />
                 </label>
 
-                <label>
-                  Level of programming{imp}
-                  <Select
-                    isSearchable={false}
-                    className="input-select"
-                    value={this.state.programming_level}
-                    onChange={this.handleSelectChange}
-                    options={options}
-                  />
+                <label
+                  data-testid="programs"
+                  for="selectId"
+                  style={{ width: "fit-content" }}
+                >
+                  <label htmlFor="programs">Level of programming {imp}</label>
+                  <select
+                    id="selectId"
+                    data-testid="select"
+                   
+                    defaultValue="Select...."
+                    onChange={this.handleChangeSelect}
+                  >
+                    <option data-testid="select-option" value="beginner">
+                      Beginner
+                    </option>
+                    <option data-testid="select-option" value="intermediate">
+                      Intermediate
+                    </option>
+                    <option data-testid="select-option" value="expert">
+                      Expert
+                    </option>
+                  </select>
                 </label>
 
-                {/* THis would depend on the level of programming */}
                 <label>
                   What languages do you code in? {imp}
                   <input
                     id="languages"
                     className="input-text"
+                    data-testid="programmingLang"
                     type="text"
                     value={this.state.programming_language}
                     onChange={this.handleChange}
@@ -682,7 +715,7 @@ class Apply extends Component {
                 <label>Do you understand that:</label>
 
                 <div>
-                  <label className="container">
+                  <label className="container" data-testid="check1">
                     fully remote{" "}
                     <input
                       type="checkbox"
@@ -692,7 +725,8 @@ class Apply extends Component {
                     {imp}
                     <span className="checkmark"></span>
                   </label>
-                  <label className="container">
+
+                  <label className="container" data-testid="check2">
                     {" "}
                     not for everyone{" "}
                     <input
@@ -703,7 +737,8 @@ class Apply extends Component {
                     {imp}
                     <span className="checkmark"></span>
                   </label>
-                  <label className="container">
+
+                  <label className="container" data-testid="check3">
                     {" "}
                     fast paced{" "}
                     <input
@@ -714,7 +749,8 @@ class Apply extends Component {
                     {imp}
                     <span className="checkmark"></span>
                   </label>
-                  <label className="container">
+
+                  <label className="container" data-testid="check4">
                     {" "}
                     no placement guarantee{" "}
                     <input
@@ -725,7 +761,8 @@ class Apply extends Component {
                     {imp}
                     <span className="checkmark"></span>
                   </label>
-                  <label className="container">
+
+                  <label className="container" data-testid="check5">
                     {" "}
                     no money back{" "}
                     <input
@@ -758,6 +795,7 @@ class Apply extends Component {
                     }}
                     className={!this.state.isEnabled ? "disabled" : null}
                     disabled={!this.state.isEnabled}
+                    data-testid = "submit"
                     type="submit"
                     value="submit"
                   />
@@ -768,13 +806,12 @@ class Apply extends Component {
 
           <Modal
             title="Application submitted successfully!"
-            visible={this.state.show}
-            onOk={this.handleClose}
-            onCancel={this.handleCancel}
+            visible={this.state.confirm}
+            onOk={this.handleCloseSubmit}
+            onCancel={this.handleCancelSubmit}
           >
-            <p>{this.successMessage}</p>
+            <p>Do you want to confirm your Submission</p>
           </Modal>
-        </Slide>
       </section>
     );
   }
