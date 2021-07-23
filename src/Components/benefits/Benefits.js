@@ -8,12 +8,10 @@ class Benefits extends Component {
         <Fade duration={1000}>
           <div className="row">
             <div className="row">
-              
-              
-              <h6>
-                {" "}
-                Why join?
-                <hr/>
+            <Fade bottom>
+              <h4>BENEFITS</h4>
+              <hr/>
+            </Fade>
                 <ul
                   style={{
                     paddingLeft: 50,
@@ -28,7 +26,7 @@ class Benefits extends Component {
                     >
                       ✔{" "}
                     </span>
-                    How to test software
+                    Learn to test software
                   </li>
 
                   <li>
@@ -40,7 +38,7 @@ class Benefits extends Component {
                     >
                       ✔{" "}
                     </span>
-                    Hands on testing experience
+                    Gain hands on testing experience
                   </li>
                   <li>
                     {" "}
@@ -63,7 +61,7 @@ class Benefits extends Component {
                     >
                       ✔{" "}
                     </span>
-                    Participate in Agile rituals
+                    Be part of an Agile team
                   </li>
 
                   <li>
@@ -75,7 +73,7 @@ class Benefits extends Component {
                     >
                       ✔{" "}
                     </span>
-                    Interact with real testers
+                    Interact, shadow and learn from professional testers
                   </li>
 
                   <li>
@@ -87,18 +85,18 @@ class Benefits extends Component {
                     >
                       ✔{" "}
                     </span>
-                    Tools for testing
+                    Apply modern testing tools and technologies on a daily basis
                     <ul>
-                      <li>- GitHub Actions</li>
-                      <li>- JavaScript and Python</li>
+                      <li>- JavaScript and/or Python</li>
                       <li>
-                        - Test automation -{">"} Selenium, Appium, BrowserStack,
-                        API, postman
+                        - Test automation -{">"} Selenium and/or Cypress and/or TestCafe, BrowserStack, API tests, Postman
                       </li>
-                      <li>- Test reporting tools - reportportal</li>
-                      <li>- Test case management tools</li>
-                      <li>- git, GitHub</li>
-                      <li>- Jira</li>
+                      <li>- Test reporting using ReportPortal</li>
+                      <li>- Test case management with TestRail</li>
+                      <li>- Version control with git</li>
+                      <li>- Share your code on GitHub</li>
+                      <li>- CI/CD with GitHub Actions</li>
+                      <li>- Issue tracking with Jira</li>
                     </ul>
                   </li>
 
@@ -110,7 +108,18 @@ class Benefits extends Component {
                     >
                       ✔{" "}
                     </span>
-                    Interview training
+                    Interview training and mock interviews
+                  </li>
+                  <li>
+                    {" "}
+                    <span
+                      style={{
+                        color: "green",
+                      }}
+                    >
+                      ✔{" "}
+                    </span>
+                    Detailed resume reviews
                   </li>
 
                   <li>
@@ -122,7 +131,7 @@ class Benefits extends Component {
                     >
                       ✔{" "}
                     </span>
-                    Resume reviews
+                    Weekly talks from industry veterans
                   </li>
 
                   <li>
@@ -134,22 +143,9 @@ class Benefits extends Component {
                     >
                       ✔{" "}
                     </span>
-                    Weekly talks (better phrasing needed here)
-                  </li>
-
-                  <li>
-                    {" "}
-                    <span
-                      style={{
-                        color: "green",
-                      }}
-                    >
-                      ✔{" "}
-                    </span>
-                    Open source contribution
+                    Guide to becoming an open source contributor
                   </li>
                 </ul>
-              </h6>
             </div>
           </div>
         </Fade>

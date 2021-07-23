@@ -94,14 +94,12 @@ class Header extends Component {
                   paddingRight: 50,
                 }}
               >
-                Hands on training with real applications. Learn to test
-                software, get familiar with modern tools and work with emerging
-                technologies.
-                <ul>
-                  <li>$ Modern tools </li>
-                  <li>$ Emerging technologies</li>
-                </ul>
-                ... Hands on software testing training with real applications
+                <p>We have developed a hands-on training program suitable for fresh graduates who prefer practical skills over theory. In this training program you will:</p>
+                <ol>
+                  <li>Work with modern tools</li><p>Python, JavaScript, Selenium, Cypress, TestCafe, BrowserStack, Jira, git, GitHub, GitHub Actions, TestRail, ReportPortal, etc.</p>
+                  <li>Test a real application</li>
+                  <li>Shadow industry professionals</li>
+                </ol>
               </h4>
             </Fade>
             <hr />

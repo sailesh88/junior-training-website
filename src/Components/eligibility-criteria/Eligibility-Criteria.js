@@ -31,16 +31,12 @@ class Eligibility extends Component {
         <Slide left duration={1300}>
           <div className="row work">
             <div className="twelve columns header-col">
-              <h1>
-                <ul>
-                  <li>Fast pace - not for everyone </li>
-                  <li>Should have done a project outside of college </li>
-                  <li>
-                    Should have a GitHub profile or a hardware project video{" "}
-                  </li>
-                  <li>2021 pass outs </li>
-                </ul>
-              </h1>
+                <ol>
+                  <li>Quick learner</li><p>You should be comfortable with a fast pace. Since we do not provide classroom training, our pace can seem fast for most trainees.</p>
+                  <li>Self starter</li><p>Doing a project on your own interest is a good indicator that you will be able to complete the training program.</p>
+                  <li>Demoable work</li> <p>You should have a GitHub profile or a project video for hardware projects.</p>
+                  <li>Recent graduate</li> <p>This program is available only to 2020 and 2021 graduates.</p>
+                </ol>
             </div>
           </div>
         </Slide>
