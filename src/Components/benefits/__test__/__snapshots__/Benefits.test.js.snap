@@ -16,183 +16,199 @@ exports[`Benefits.js matches snapshot 1`] = `
     <div
       className="row"
     >
-      <h6>
-         
-        Why join?
-        <hr />
-        <ul
-          style={
-            Object {
-              "fontSize": 14,
-              "paddingLeft": 50,
-            }
+      <h4
+        className="react-reveal"
+        style={
+          Object {
+            "opacity": undefined,
           }
-        >
-          <li>
-            <span
-              style={
-                Object {
-                  "color": "green",
-                }
+        }
+      >
+        BENEFITS
+      </h4>
+      <hr
+        className="react-reveal"
+        style={
+          Object {
+            "opacity": undefined,
+          }
+        }
+      />
+      <ul
+        style={
+          Object {
+            "fontSize": 14,
+            "paddingLeft": 50,
+          }
+        }
+      >
+        <li>
+          <span
+            style={
+              Object {
+                "color": "green",
               }
-            >
-              ✔
-               
-            </span>
-            How to test software
-          </li>
-          <li>
+            }
+          >
+            ✔
              
-            <span
-              style={
-                Object {
-                  "color": "green",
-                }
+          </span>
+          Learn to test software
+        </li>
+        <li>
+           
+          <span
+            style={
+              Object {
+                "color": "green",
               }
-            >
-              ✔
-               
-            </span>
-            Hands on testing experience
-          </li>
-          <li>
+            }
+          >
+            ✔
              
-            <span
-              style={
-                Object {
-                  "color": "green",
-                }
+          </span>
+          Gain hands on testing experience
+        </li>
+        <li>
+           
+          <span
+            style={
+              Object {
+                "color": "green",
               }
-            >
-              ✔
-               
-            </span>
-            Test real applications
-          </li>
-          <li>
+            }
+          >
+            ✔
              
-            <span
-              style={
-                Object {
-                  "color": "green",
-                }
+          </span>
+          Test real applications
+        </li>
+        <li>
+           
+          <span
+            style={
+              Object {
+                "color": "green",
               }
-            >
-              ✔
-               
-            </span>
-            Participate in Agile rituals
-          </li>
-          <li>
+            }
+          >
+            ✔
              
-            <span
-              style={
-                Object {
-                  "color": "green",
-                }
+          </span>
+          Be part of an Agile team
+        </li>
+        <li>
+           
+          <span
+            style={
+              Object {
+                "color": "green",
               }
-            >
-              ✔
-               
-            </span>
-            Interact with real testers
-          </li>
-          <li>
+            }
+          >
+            ✔
              
-            <span
-              style={
-                Object {
-                  "color": "green",
-                }
+          </span>
+          Interact, shadow and learn from professional testers
+        </li>
+        <li>
+           
+          <span
+            style={
+              Object {
+                "color": "green",
               }
-            >
-              ✔
-               
-            </span>
-            Tools for testing
-            <ul>
-              <li>
-                - GitHub Actions
-              </li>
-              <li>
-                - JavaScript and Python
-              </li>
-              <li>
-                - Test automation -
-                &gt;
-                 Selenium, Appium, BrowserStack, API, postman
-              </li>
-              <li>
-                - Test reporting tools - reportportal
-              </li>
-              <li>
-                - Test case management tools
-              </li>
-              <li>
-                - git, GitHub
-              </li>
-              <li>
-                - Jira
-              </li>
-            </ul>
-          </li>
-          <li>
-            <span
-              style={
-                Object {
-                  "color": "green",
-                }
-              }
-            >
-              ✔
-               
-            </span>
-            Interview training
-          </li>
-          <li>
+            }
+          >
+            ✔
              
-            <span
-              style={
-                Object {
-                  "color": "green",
-                }
+          </span>
+          Apply modern testing tools and technologies on a daily basis
+          <ul>
+            <li>
+              - JavaScript and/or Python
+            </li>
+            <li>
+              - Test automation -
+              &gt;
+               Selenium and/or Cypress and/or TestCafe, BrowserStack, API tests, Postman
+            </li>
+            <li>
+              - Test reporting using ReportPortal
+            </li>
+            <li>
+              - Test case management with TestRail
+            </li>
+            <li>
+              - Version control with git
+            </li>
+            <li>
+              - Share your code on GitHub
+            </li>
+            <li>
+              - CI/CD with GitHub Actions
+            </li>
+            <li>
+              - Issue tracking with Jira
+            </li>
+          </ul>
+        </li>
+        <li>
+          <span
+            style={
+              Object {
+                "color": "green",
               }
-            >
-              ✔
-               
-            </span>
-            Resume reviews
-          </li>
-          <li>
+            }
+          >
+            ✔
              
-            <span
-              style={
-                Object {
-                  "color": "green",
-                }
+          </span>
+          Interview training and mock interviews
+        </li>
+        <li>
+           
+          <span
+            style={
+              Object {
+                "color": "green",
               }
-            >
-              ✔
-               
-            </span>
-            Weekly talks (better phrasing needed here)
-          </li>
-          <li>
+            }
+          >
+            ✔
              
-            <span
-              style={
-                Object {
-                  "color": "green",
-                }
+          </span>
+          Detailed resume reviews
+        </li>
+        <li>
+           
+          <span
+            style={
+              Object {
+                "color": "green",
               }
-            >
-              ✔
-               
-            </span>
-            Open source contribution
-          </li>
-        </ul>
-      </h6>
+            }
+          >
+            ✔
+             
+          </span>
+          Weekly talks from industry veterans
+        </li>
+        <li>
+           
+          <span
+            style={
+              Object {
+                "color": "green",
+              }
+            }
+          >
+            ✔
+             
+          </span>
+          Guide to becoming an open source contributor
+        </li>
+      </ul>
     </div>
   </div>
 </section>

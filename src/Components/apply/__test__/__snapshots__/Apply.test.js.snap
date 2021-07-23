@@ -6,12 +6,7 @@ exports[`Apply.js matches snapshot 1`] = `
   id="apply"
 >
   <div
-    className="react-reveal row education"
-    style={
-      Object {
-        "opacity": undefined,
-      }
-    }
+    className="row education"
   >
     <div
       className="eight columns header-col"
@@ -31,13 +26,8 @@ exports[`Apply.js matches snapshot 1`] = `
     </div>
   </div>
   <div
-    className="react-reveal row work"
+    className="row work"
     data-testid="form"
-    style={
-      Object {
-        "opacity": undefined,
-      }
-    }
   >
     <div
       className="twelve columns header-col"
@@ -562,13 +552,5 @@ exports[`Apply.js matches snapshot 1`] = `
       </form>
     </div>
   </div>
-  <div
-    className="react-reveal"
-    style={
-      Object {
-        "opacity": undefined,
-      }
-    }
-  />
 </section>
 `;
