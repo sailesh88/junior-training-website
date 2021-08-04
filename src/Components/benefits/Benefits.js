@@ -10,7 +10,6 @@ class Benefits extends Component {
             <div className="row">
             <Fade bottom>
               <h4>BENEFITS</h4>
-              <hr/>
             </Fade>
                 <ul
                   style={{

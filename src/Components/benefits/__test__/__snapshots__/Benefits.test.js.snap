@@ -26,14 +26,6 @@ exports[`Benefits.js matches snapshot 1`] = `
       >
         BENEFITS
       </h4>
-      <hr
-        className="react-reveal"
-        style={
-          Object {
-            "opacity": undefined,
-          }
-        }
-      />
       <ul
         style={
           Object {
