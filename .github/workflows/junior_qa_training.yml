@@ -1,4 +1,4 @@
-name: Deploy the training website
+name: Deploy the junior QA training website
 on:
   push:
     branches:
