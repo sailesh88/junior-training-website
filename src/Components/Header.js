@@ -83,15 +83,15 @@ class Header extends Component {
               </h1>
             </Fade>
             <Fade bottom duration={1200}>
-                <p className="sub-title">We have developed a <i style={{
+                <p className="sub-title">Join a <i style={{
                     color: "yellow",
-                  }}>hands-on</i> training program suitable for fresh graduates who prefer <i style={{
+                  }}>hands-on</i> QA training program suitable for fresh graduates who prefer <i style={{
                     color: "yellow",
                   }}>practical skills over theory</i>.<br></br><br></br><br></br><br></br> In this training program you will:</p>
                 <ol>
                   <li class="sub-title">Test a real application</li>
                   <li class="sub-title">Shadow industry professionals</li>
-                  <li class="sub-title">Work with a modern toolbelt: Python, JavaScript, Selenium, Cypress, TestCafe, BrowserStack, Jira, git, GitHub, GitHub Actions, TestRail, ReportPortal, etc.</li>
+                  <li class="sub-title">Work with a modern toolbelt: Python, JavaScript, Selenium, Cypress, TestCafe, API testing tools, BrowserStack, Jira, git, GitHub, GitHub Actions, TestRail, ReportPortal, etc.</li>
                   <li class="sub-title">Prepare to land an entry level QA job</li>
                 </ol>
             </Fade>
