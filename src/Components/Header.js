@@ -1,13 +1,10 @@
 import React, { Component } from "react";
-import ParticlesBg from "particles-bg";
 import Fade from "react-reveal";
 
 class Header extends Component {
   render() {
     return (
       <header id="home" data-testid="home" >
-        <ParticlesBg type="circle" bg={true} />
-
         <nav id="nav-wrap">
           {/* Navbar brand
           <a className="logo" href="#home">
@@ -86,25 +83,13 @@ class Header extends Component {
               </h1>
             </Fade>
             <Fade bottom duration={1200}>
-              <h4
-                style={{
-                  textAlign: "justify",
-                  color: "white",
-                  paddingLeft: 50,
-                  paddingRight: 50,
-                }}
-              >
-                Hands on training with real applications. Learn to test
-                software, get familiar with modern tools and work with emerging
-                technologies.
-                <ul>
-                  <li>$ Modern tools </li>
-                  <li>$ Emerging technologies</li>
-                </ul>
-                ... Hands on software testing training with real applications
-              </h4>
+                <p className="sub-title">We have developed a <u>hands-on</u> training program suitable for fresh graduates who prefer <u>practical skills over theory</u>.<br></br><br></br><br></br><br></br> In this training program you will:</p>
+                <ol>
+                  <li class="sub-title">Test a real application</li>
+                  <li class="sub-title">Shadow industry professionals</li>
+                  <li className="sub-title">Work with a modern toolbelt: Python, JavaScript, Selenium, Cypress, TestCafe, BrowserStack, Jira, git, GitHub, GitHub Actions, TestRail, ReportPortal, etc.</li>
+                </ol>
             </Fade>
-            <hr />
           </div>
         </div>
 

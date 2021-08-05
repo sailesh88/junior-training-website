@@ -6,58 +6,58 @@ exports[`Eligibility-criteria.js matches snapshot 1`] = `
   id="eligibility"
 >
   <div
-    className="react-reveal row education"
+    className="react-reveal row"
     style={
       Object {
         "opacity": undefined,
       }
     }
   >
-    <div
-      className="eight columns header-col"
+    <h4
+      className="react-reveal"
+      style={
+        Object {
+          "opacity": undefined,
+        }
+      }
     >
-      <h1>
-        <span>
-          Eligibility Criteria
-        </span>
-      </h1>
-    </div>
+      ELIGIBILITY CRITERIA
+    </h4>
     <div
-      className="nine columns main-col"
+      className="twelve columns collapsed"
     >
       <div
-        className="row item"
-      />
-    </div>
-  </div>
-  <div
-    className="react-reveal row work"
-    style={
-      Object {
-        "opacity": undefined,
-      }
-    }
-  >
-    <div
-      className="twelve columns header-col"
-    >
-      <h1>
-        <ul>
+        className="bgrid-quarters s-bgrid-thirds cf"
+      >
+        <ol>
           <li>
-            Fast pace - not for everyone 
+            Quick learner
           </li>
+          <p>
+            You should be comfortable with a fast pace. Since we do not provide classroom training, our pace can seem fast for most trainees.
+          </p>
           <li>
-            Should have done a project outside of college 
+            Self starter
           </li>
+          <p>
+            Doing a project on your own interest is a good indicator that you will be able to complete the training program.
+          </p>
           <li>
-            Should have a GitHub profile or a hardware project video
-             
+            Demoable work
           </li>
+           
+          <p>
+            You should have a GitHub profile or a project video for hardware projects.
+          </p>
           <li>
-            2021 pass outs 
+            Recent graduate
           </li>
-        </ul>
-      </h1>
+           
+          <p>
+            This program is available only to 2020 and 2021 graduates.
+          </p>
+        </ol>
+      </div>
     </div>
   </div>
 </section>

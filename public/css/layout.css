@@ -33,7 +33,8 @@ header {
   height: 800px;
   min-height: 500px;
   width: 100%;
-
+  background-color: #000;
+  opacity: 90%;
   text-align: center;
   overflow: hidden;
 }
@@ -61,7 +62,7 @@ header .banner-text h1 {
   font: 90px/1.1em "opensans-bold", sans-serif;
   color: #fff;
   letter-spacing: -2px;
-  margin: 0 auto 18px auto;
+  margin: 0 auto 75px auto;
 }
 header .banner-text h3 {
   font: 18px/1.9em "librebaskerville-regular", serif;
@@ -120,6 +121,12 @@ header .scrolldown a {
 }
 header .scrolldown a:hover {
   color: #0762f9;
+}
+
+header .sub-title{
+  font: 21px/24px "opensans", sans-serif !important;
+  text-align: left !important;
+  color: #fff !important;
 }
 
 /* primary navigation
@@ -205,15 +212,14 @@ ul#nav li.current a {
 
 #benefits,
 #about {
-  background: #000524;
+  background: #87ceeb;
   padding-top: 96px;
   padding-bottom: 66px;
   overflow: hidden;
 }
 
 #benefits a,
-#benefits a:visited #about a,
-#about a:visited {
+#benefits a:visited {
   color: #fff;
 }
 
@@ -234,8 +240,9 @@ ul#nav li.current a {
 #benefits li,
 #benefits h6,
 #about p {
-  line-height: 30px;
-  color: #ccc;
+  font: 16px/21px "opensans", sans-serif;
+  color:#222222;
+  line-height: 40px;
 }
 
 /* ------------------------------------------------------------------ */
@@ -243,13 +250,20 @@ ul#nav li.current a {
 /* ------------------------------------------------------------------ */
 
 #why-us,
-#program,
 #eligibility,
-#apply {
-  background: #fff;
-  padding-top: 90px;
+#apply{
+  background: #a1a1a17c;
+  padding-top: 70px;
   padding-bottom: 72px;
   overflow: hidden;
+}
+
+#program{
+  background: #1abc9c;
+  padding-top: 70px;
+  padding-bottom: 72px;
+  overflow: hidden;
+
 }
 
 #why-us a,
@@ -275,12 +289,35 @@ ul#nav li.current a {
 
 #why-us h1,
 #program h1,
-#eligibility h1,
+#eligibility h1{
+  font: 18px/24px "opensans-bold", sans-serif;
+  color:#777777;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
 #apply h1 {
   font: 18px/24px "opensans-bold", sans-serif;
   text-transform: uppercase;
   letter-spacing: 1px;
 }
+
+#eligibility li,
+#why-us li,
+#program li {
+  font: 18px/24px "opensans", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+#eligibility p,
+#why-us p,
+#program p {
+  font: 16px/21px "opensans", sans-serif;
+  color:#444444;
+  text-transform: none !important;
+  letter-spacing: 1px;
+}
+
 
 #why-us h1 span,
 #program h1 span,
@@ -293,6 +330,11 @@ ul#nav li.current a {
 #program h3,
 #eligibility h3 #apply h3 {
   font: 25px/30px "opensans-bold", sans-serif;
+}
+
+#benefits h4,
+#about h4 a{
+  color: #000000;
 }
 
 #why-us .header-col,
@@ -309,9 +351,8 @@ ul#nav li.current a {
 
 .education,
 .work {
-  margin-bottom: 48px;
-  padding-bottom: 24px;
-  border-bottom: 1px solid #e8e8e8;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
 }
 
 #why-us .info,
@@ -806,6 +847,12 @@ call-to-action .button {
   color: #ebeeee;
 }
 
+#eligibility h4,
+#program h4,
+#why-us h4{
+  color:#6F6F6F;
+}
+
 #contact h4 {
   font: 16px/24px "opensans-bold", sans-serif;
   color: #ebeeee;
@@ -1078,7 +1125,6 @@ footer .social-links li:first-child {
   font-family: "opensans-semibold", sans-serif;
   color: #0d0d0d;
   font-weight: bold;
-  background-color: white;
   padding: 10px 0;
   border-radius: 10px;
   margin-top: 10px;

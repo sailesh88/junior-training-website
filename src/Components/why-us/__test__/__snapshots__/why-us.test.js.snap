@@ -21,7 +21,7 @@ exports[`Why-us.js matches snapshot 1`] = `
         }
       }
     >
-      Why us?
+      WHY US?
     </h4>
     <div
       className="twelve columns collapsed"
@@ -29,26 +29,50 @@ exports[`Why-us.js matches snapshot 1`] = `
       <div
         className="bgrid-quarters s-bgrid-thirds cf"
       >
-        <ul>
+        <ol>
           <li>
-             Professional testers teach you 
+             We are professional testers
           </li>
+          <p>
+            We are professional QA engineers who have an interest in training. All of us work full-time at 
+            <a
+              href="https://qxf2.com"
+            >
+              Qxf2 Services
+            </a>
+            .
+          </p>
           <li>
-             No spoonfeeding 
+             No spoonfeeding
           </li>
+          <p>
+            The tasks we assign to you will be very similar to what we do in the industry. You will be forced to think for yourself and solve real problems.
+          </p>
           <li>
              Practical ... not theoretical 
           </li>
+          <p>
+            Unlike college and other training institutes, all your training is going to be hands-on. 
+          </p>
           <li>
              No school like approach 
           </li>
+          <p>
+            You will recieve minimal guidance. Instead, you will learn by shadowing senior QA engineers and by working on real problems.
+          </p>
           <li>
              No syllabus or book knowledge 
           </li>
+          <p>
+            The training will not work off a syllabus. We will not provide study materials. You need to do things and learn. 
+          </p>
           <li>
              Real application 
           </li>
-        </ul>
+          <p>
+            You will learn how software products are made in the industry by testing a real application.
+          </p>
+        </ol>
       </div>
     </div>
   </div>
