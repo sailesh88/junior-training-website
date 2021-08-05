@@ -1,0 +1,20 @@
+name: Deploy the training website
+on:
+  push:
+    branches:
+      - main
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - name: SSH to EC2 instance
+      uses: appleboy/ssh-action@master
+      with:
+        host: ${{ secrets.HOST }}
+        username: ${{ secrets.USERNAME }}
+        key: ${{ secrets.KEY }}
+        script:  |
+          cd junior-training-website/
+          git pull
+          npm run-script build
+          cp -r build/* /var/www/junior-training-website/
