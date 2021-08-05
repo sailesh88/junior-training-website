@@ -88,6 +88,7 @@ class Header extends Component {
                   <li class="sub-title">Test a real application</li>
                   <li class="sub-title">Shadow industry professionals</li>
                   <li class="sub-title">Work with a modern toolbelt: Python, JavaScript, Selenium, Cypress, TestCafe, BrowserStack, Jira, git, GitHub, GitHub Actions, TestRail, ReportPortal, etc.</li>
+                  <li class="sub-title">Prepare to land an entry level QA job</li>
                 </ol>
             </Fade>
           </div>
