@@ -37,6 +37,7 @@ header {
   opacity: 90%;
   text-align: center;
   overflow: hidden;
+  z-index: 5;
 }
 
 /* vertically center banner section */
@@ -60,7 +61,7 @@ header .banner-text {
 }
 header .banner-text h1 {
   font: 90px/1.1em "opensans-bold", sans-serif;
-  color: #fff;
+  color: #ddd;
   letter-spacing: -2px;
   margin: 0 auto 75px auto;
 }
@@ -256,6 +257,7 @@ ul#nav li.current a {
   padding-top: 70px;
   padding-bottom: 72px;
   overflow: hidden;
+  z-index: 0;
 }
 
 #program{
