@@ -498,6 +498,7 @@ class Apply extends Component {
               </label>
 
               <label>
+                <br />
                 Have you done any projects outside of college? {imp}
                 <br />
                 <div onChange={this.onRadioChange}>
@@ -526,22 +527,27 @@ class Apply extends Component {
                   </label>
 
                   <label>
-                    what is your project related to? {imp}
+                    <br />
+                    What is your project related to? {imp}
                     <br />
                     <div onChange={this.onRadioChange}>
+                      <label>
                       <input
                         type="radio"
                         value="hardware"
                         name="project-type"
                       />
-                      Hardware
-                      <br />
+                      &nbsp; Hardware
+                      </label>
+                      <label>
                       <input
                         type="radio"
                         value="software"
                         name="project-type"
                       />
-                      software
+                      &nbsp; Software
+                      <br />
+                      </label>
                     </div>
                   </label>
                   {!this.state.isHardware ? (
@@ -606,7 +612,6 @@ class Apply extends Component {
                   onChange={this.handleChange}
                 />
               </label>
-
               <label>
                 Would you like to start your career in software testing? {imp}
                 <textarea
@@ -632,13 +637,13 @@ class Apply extends Component {
                   onChange={this.handleChangeSelect}
                 >
                   <option data-testid="select-option" value="beginner">
-                    Beginner
+                    Beginner (I rarely write code)
                   </option>
                   <option data-testid="select-option" value="intermediate">
-                    Intermediate
+                    Intermediate (I write ~100 lines of code every week)
                   </option>
                   <option data-testid="select-option" value="expert">
-                    Expert
+                    Expert       (I am fluent in at least one programming language)
                   </option>
                 </select>
               </label>
@@ -754,13 +759,14 @@ class Apply extends Component {
                   <span className="checkmark"></span>
                 </label>
               </div>
+              <br />
               {!this.state.isEnabled ? (
                 <span className="required">
-                  please fill all the required* fields(min 4 characters each) to
+                  Please fill all the required* fields to
                   submit your application <br />{" "}
                 </span>
               ) : null}
-
+              <br />
               {this.isSubmitted ? (
                 <span id="image-loader">
                   <img alt="" src="images/loader.gif" />
