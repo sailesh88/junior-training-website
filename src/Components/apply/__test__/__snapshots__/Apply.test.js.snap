@@ -36,7 +36,7 @@ exports[`Apply.js matches snapshot 1`] = `
         onSubmit={[Function]}
       >
         <label>
-          Name(only alphabets) 
+          Name 
           <span
             className="required"
           >

@@ -116,7 +116,7 @@ class Apply extends Component {
     const id = event.target.id;
     switch (id) {
       case "Name":
-        if (validator.isAlpha(event.target.value)) {
+        if (event.target.value == "" || event.target.value.match(/^[A-Za-z ]+$/)) {
           this.setState({ name: event.target.value });
         }
         break;
@@ -388,7 +388,7 @@ class Apply extends Component {
           <div className="twelve columns header-col">
             <form onSubmit={this.handleSubmit}>
               <label>
-                Name(only alphabets) {imp}
+                Name {imp}
                 <input
                   data-testid="name"
                   id="Name"
@@ -459,7 +459,7 @@ class Apply extends Component {
                     onChange={this.handleChange}
                   />
 
-                  <label data-testid="year">Year of pass out{imp}</label>
+                  <label data-testid="year">year of pass out{imp}</label>
 
                   <DatePicker
                     placeholderText="Select Year"
@@ -498,7 +498,6 @@ class Apply extends Component {
               </label>
 
               <label>
-                <br />
                 Have you done any projects outside of college? {imp}
                 <br />
                 <div onChange={this.onRadioChange}>
@@ -512,6 +511,7 @@ class Apply extends Component {
                     &nbsp; No
                   </label>
                 </div>
+                <br />
               </label>
               {this.state.isCollegeProject && (
                 <div>
@@ -527,27 +527,22 @@ class Apply extends Component {
                   </label>
 
                   <label>
-                    <br />
-                    What is your project related to? {imp}
+                    what is your project related to? {imp}
                     <br />
                     <div onChange={this.onRadioChange}>
-                      <label>
                       <input
                         type="radio"
                         value="hardware"
                         name="project-type"
                       />
-                      &nbsp; Hardware
-                      </label>
-                      <label>
+                      Hardware
+                      <br />
                       <input
                         type="radio"
                         value="software"
                         name="project-type"
                       />
-                      &nbsp; Software
-                      <br />
-                      </label>
+                      software
                     </div>
                   </label>
                   {!this.state.isHardware ? (
@@ -612,6 +607,7 @@ class Apply extends Component {
                   onChange={this.handleChange}
                 />
               </label>
+
               <label>
                 Would you like to start your career in software testing? {imp}
                 <textarea
@@ -637,13 +633,13 @@ class Apply extends Component {
                   onChange={this.handleChangeSelect}
                 >
                   <option data-testid="select-option" value="beginner">
-                    Beginner (I rarely write code)
+                    Beginner
                   </option>
                   <option data-testid="select-option" value="intermediate">
-                    Intermediate (I write ~100 lines of code every week)
+                    Intermediate
                   </option>
                   <option data-testid="select-option" value="expert">
-                    Expert       (I am fluent in at least one programming language)
+                    Expert
                   </option>
                 </select>
               </label>
@@ -759,14 +755,13 @@ class Apply extends Component {
                   <span className="checkmark"></span>
                 </label>
               </div>
-              <br />
               {!this.state.isEnabled ? (
                 <span className="required">
-                  Please fill all the required* fields to
+                  please fill all the required* fields(min 4 characters each) to
                   submit your application <br />{" "}
                 </span>
               ) : null}
-              <br />
+
               {this.isSubmitted ? (
                 <span id="image-loader">
                   <img alt="" src="images/loader.gif" />
