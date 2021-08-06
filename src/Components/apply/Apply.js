@@ -459,7 +459,7 @@ class Apply extends Component {
                     onChange={this.handleChange}
                   />
 
-                  <label data-testid="year">year of pass out{imp}</label>
+                  <label data-testid="year">Year of pass out{imp}</label>
 
                   <DatePicker
                     placeholderText="Select Year"
@@ -511,7 +511,6 @@ class Apply extends Component {
                     &nbsp; No
                   </label>
                 </div>
-                <br />
               </label>
               {this.state.isCollegeProject && (
                 <div>
