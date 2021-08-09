@@ -193,7 +193,7 @@ class Apply extends Component {
       this.state.linkedIn_url.trim().length > 3 &&
       this.state.start_testing.trim().length > 3 &&
       this.state.programming_language.trim().length > 3 &&
-      this.state.programming_level .trim()!= null &&
+      this.state.programming_level != null &&
       this.state.how_u_find_us.trim().length > 3 &&
       this.state.technical_interest.trim().length > 3 &&
       this.state.looking_from_us.trim().length > 3 &&
@@ -622,7 +622,7 @@ class Apply extends Component {
 
               <label
                 data-testid="programs"
-                for="selectId"
+                htmlfor="selectId"
                 style={{ width: "fit-content" }}
               >
                 <label htmlFor="programs">Level of programming {imp}</label>

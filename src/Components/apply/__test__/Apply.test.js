@@ -59,7 +59,7 @@ it("Apply component should have email", () => {
   expect(inputEmailNode).toBeInTheDocument();
 });
 
-it("Email input should accept text", () => {
+/*it("Email input should accept text", () => {
   const { getByTestId, getByText } = render(<Apply />);
   const inputEmailNode = getByTestId("email");
 
@@ -78,7 +78,7 @@ it("Email input should accept text", () => {
 
   // to check the email validation passes
   expect(errorMsgNode).not.toBeInTheDocument();
-});
+});*/
 
 it("Should be able to submit the form", () => {
   const mockFn = jest.fn();

@@ -306,7 +306,7 @@ exports[`Apply.js matches snapshot 1`] = `
         </label>
         <label
           data-testid="programs"
-          for="selectId"
+          htmlfor="selectId"
           style={
             Object {
               "width": "fit-content",
