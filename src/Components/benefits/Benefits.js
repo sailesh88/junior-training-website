@@ -7,16 +7,12 @@ class Benefits extends Component {
       <section id="benefits" data-testid="benefits" >
         <Fade duration={1000}>
           <div className="row">
-            <div className="row">
             <Fade bottom>
               <h4>BENEFITS</h4>
             </Fade>
-                <ul
-                  style={{
-                    paddingLeft: 50,
-                    fontSize: 14,
-                  }}
-                >
+            <div className="twelve columns collapsed">
+              <div className="bgrid-quarters s-bgrid-thirds cf">
+                <ul>
                   <li>
                     <span
                       style={{
@@ -145,6 +141,7 @@ class Benefits extends Component {
                     Guide to becoming an open source contributor
                   </li>
                 </ul>
+              </div>
             </div>
           </div>
         </Fade>
