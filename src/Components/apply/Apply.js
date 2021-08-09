@@ -123,7 +123,7 @@ class Apply extends Component {
       case "Email":
         this.setState({ email: event.target.value });
         this.email_error = true;
-        if (validator.isEmail(event.target.value)) {
+        if (validator.isEmail(event.target.value)|| validator.isEmpty(event.target)) {
           this.email_error = false;
         }
         break;
@@ -183,20 +183,20 @@ class Apply extends Component {
   // checking all validation from the users input
   setButton() {
     if (
-      this.state.name.length > 3 &&
+      this.state.name.trim().length > 3 &&
       this.state.email.length > 3 &&
-      this.state.educationCollege.length > 3 &&
-      this.state.educationCourse.length >= 2 &&
-      this.state.educationBranch.length >= 2 &&
+      this.state.educationCollege.trim().length > 3 &&
+      this.state.educationCourse.trim().length >= 2 &&
+      this.state.educationBranch.trim().length >= 2 &&
       this.state.educationYear != null &&
-      this.state.personalInfo.length > 3 &&
-      this.state.linkedIn_url.length > 3 &&
-      this.state.start_testing.length > 3 &&
-      this.state.programming_language.length > 3 &&
-      this.state.programming_level != null &&
-      this.state.how_u_find_us.length > 3 &&
-      this.state.technical_interest.length > 3 &&
-      this.state.looking_from_us.length > 3 &&
+      this.state.personalInfo.trim().length > 3 &&
+      this.state.linkedIn_url.trim().length > 3 &&
+      this.state.start_testing.trim().length > 3 &&
+      this.state.programming_language.trim().length > 3 &&
+      this.state.programming_level .trim()!= null &&
+      this.state.how_u_find_us.trim().length > 3 &&
+      this.state.technical_interest.trim().length > 3 &&
+      this.state.looking_from_us.trim().length > 3 &&
       this.checks.check1 &&
       this.checks.check2 &&
       this.checks.check3 &&
