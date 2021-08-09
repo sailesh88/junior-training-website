@@ -3,29 +3,19 @@ import Fade from "react-reveal";
 
 const socials = [
   {
-    "name":"facebook",
-    "url":"",
-    "className":"fa fa-facebook"
-  },
-  {
-    "name":"twitter",
-    "url":"",
-    "className":"fa fa-twitter"
-  },
-  {
-    "name":"linkedin",
-    "url":"",
-    "className":"fa fa-linkedin"
-  },
-  {
-    "name":"instagram",
-    "url":"",
-    "className":"fa fa-instagram"
-  },
-  {
     "name":"github",
     "url":"https://github.com/qxf2",
     "className":"fa fa-github"
+  },
+  {
+    "name":"linkedin",
+    "url":"https://www.linkedin.com/company/3586569/admin/",
+    "className":"fa fa-linkedin"
+  },
+  {
+    "name":"twitter",
+    "url":"https://twitter.com/Qxf21",
+    "className":"fa fa-twitter"
   }
 ];
 
@@ -42,6 +32,8 @@ class Footer extends Component {
       );
     });
 
+    const copyright_end = new Date().getFullYear();
+
     return(
       <footer style={{
         paddingBottom : "20px",
@@ -53,7 +45,7 @@ class Footer extends Component {
               <ul className="social-links">{networks}</ul>
 
               <ul className="copyright">
-                <li>&copy;  Qxf2 Services 2013 - 2021</li>
+                <li>&copy;  Qxf2 Services 2013 - {copyright_end}</li>
               </ul>
             </div>
           </Fade>
