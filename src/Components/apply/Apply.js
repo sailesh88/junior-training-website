@@ -307,7 +307,7 @@ class Apply extends Component {
       this.state.linkedIn_url +
       "<br> <br> <b>Q7 What do you know about testing?</b> <br>" +
       this.state.about_testing +
-      "<br> <br> <b>Q8 Would you like to start your career in software testing?</b> <br>" +
+      "<br> <br> <b>Q8 Would you like to start your career in software testing? Why or why not?</b> <br>" +
       this.state.start_testing +
       "<br> <br> <b>Q9 Level of programming</b> <br>" +
       this.state.programming_level +
@@ -609,7 +609,7 @@ class Apply extends Component {
               </label>
 
               <label>
-                Would you like to start your career in software testing? {imp}
+                Would you like to start your career in software testing? Why or why not?{imp}
                 <textarea
                   id="software-testing"
                   data-testid="likeToTesting"
