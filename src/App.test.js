@@ -86,12 +86,12 @@ it("Check for the Navigation", () => {
     { title: "Benefits", id :"benefits" },
     { title: "Why Us?", id :"why-us" },
     { title: "Program details", id :"program" },
-    { title: "Eligibility criteria", id :"eligibility" },
-    { title: "About Qxf2", id :"about" },
+    { title: "Eligibility", id :"eligibility" },
+    { title: "About", id :"about" },
     { title: "Before you apply", id :"before-you-apply" },
     { title: "Apply!", id :"apply" },
   ];
-  
+
   headerLinkProp.forEach((node) => {
     let location = url + node.id;
     expect(getByText(node.title).href).toBe(location);
@@ -99,5 +99,5 @@ it("Check for the Navigation", () => {
     expect(sectionNode).toBeInTheDocument();
 
   });
-  
-}); 
+
+});
