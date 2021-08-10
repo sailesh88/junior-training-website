@@ -252,7 +252,8 @@ ul#nav li.current a {
 
 #why-us,
 #eligibility,
-#apply{
+#apply,
+#placements{
   background: #a1a1a17c;
   padding-top: 70px;
   padding-bottom: 72px;
@@ -313,7 +314,8 @@ ul#nav li.current a {
 
 #eligibility p,
 #why-us p,
-#program p {
+#program p,
+#placements p {
   font: 16px/21px "opensans", sans-serif;
   color:#444444;
   text-transform: none !important;

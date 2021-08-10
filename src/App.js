@@ -11,7 +11,7 @@ import BeforeApply from "./Components/before-you-apply/Before-You-Apply";
 import Apply from "./Components/apply/Apply";
 
 class App extends Component {
- 
+
   render() {
     return (
       <div className="App">

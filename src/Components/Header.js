@@ -45,13 +45,13 @@ class Header extends Component {
 
             <li>
               <a className="smoothscroll" href="#eligibility">
-                Eligibility criteria
+                Eligibility
               </a>
             </li>
 
             <li>
               <a className="smoothscroll" href="#about">
-                About Qxf2
+                About
               </a>
             </li>
 
@@ -85,7 +85,7 @@ class Header extends Component {
             <Fade bottom duration={1200}>
                 <p className="sub-title">Join a <i style={{
                     color: "yellow",
-                  }}>hands-on</i> QA training program suitable for fresh graduates who prefer <i style={{
+                  }}>hands-on</i> QA training program tailored for fresh graduates who prefer <i style={{
                     color: "yellow",
                   }}>practical skills over theory</i>.<br></br><br></br><br></br><br></br> In this training program you will:</p>
                 <ol>
