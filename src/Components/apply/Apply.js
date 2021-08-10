@@ -527,7 +527,7 @@ class Apply extends Component {
                   </label>
 
                   <label>
-                    what is your project related to? {imp}
+                    What is your project related to? {imp}
                     <br />
                     <div onChange={this.onRadioChange}>
                       <input
@@ -542,7 +542,7 @@ class Apply extends Component {
                         value="software"
                         name="project-type"
                       />
-                      software
+                      Software
                     </div>
                   </label>
                   {!this.state.isHardware ? (
