@@ -7,11 +7,12 @@ import WhyUs from "./Components/why-us/why-us";
 import Eligibility from "./Components/eligibility-criteria/Eligibility-Criteria";
 import Program from "./Components/program-details/Program-Details";
 import About from "./Components/about/About";
+import Placements from "./Components/placements/Placements";
 import BeforeApply from "./Components/before-you-apply/Before-You-Apply";
 import Apply from "./Components/apply/Apply";
 
 class App extends Component {
- 
+
   render() {
     return (
       <div className="App">
@@ -21,6 +22,7 @@ class App extends Component {
         <Program />
         <Eligibility />
         <About />
+        <Placements />
         <BeforeApply />
         <Apply />
         <Footer />

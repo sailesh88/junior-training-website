@@ -54,6 +54,11 @@ class Header extends Component {
                 About Qxf2
               </a>
             </li>
+            <li>
+              <a className="smoothscroll" href="#placements">
+                Placements
+              </a>
+            </li>
 
             <li>
               <a className="smoothscroll" href="#before-you-apply">
