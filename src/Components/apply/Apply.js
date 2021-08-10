@@ -468,10 +468,10 @@ class Apply extends Component {
                     selected={this.state.educationYear}
                     onChange={(date) => this.setState({ educationYear: date })}
                     showYearPicker
-                    minDate={new Date(year - 3, 0, 1)}
-                    maxDate={new Date(year + 3, 11, 31)}
+                    minDate={new Date(year - 1, 0, 1)}
+                    maxDate={new Date(year + 1, 11, 31)}
                     dateFormat="yyyy"
-                    yearItemNumber={10}
+                    yearItemNumber={11}
                   />
 
                   <span
