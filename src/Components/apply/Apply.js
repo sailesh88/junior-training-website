@@ -123,7 +123,7 @@ class Apply extends Component {
       case "Email":
         this.setState({ email: event.target.value });
         this.email_error = true;
-        if (validator.isEmail(event.target.value)|| validator.isEmpty(event.target)) {
+        if (validator.isEmail(event.target.value)|| validator.isEmpty(event.target.value)) {
           this.email_error = false;
         }
         break;
