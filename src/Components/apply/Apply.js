@@ -250,8 +250,8 @@ class Apply extends Component {
     this.setState({ isEnabled: this.setButton() });
   };
 
-  handleChangeSelect = (value) => {
-    this.setState({ programming_level: value });
+  handleChangeSelect = (event) => {
+    this.setState({ programming_level: event.target.value });
     this.setState({ isEnabled: this.setButton() });
   };
 
