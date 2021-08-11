@@ -87,7 +87,7 @@ class Header extends Component {
                     color: "yellow",
                   }}>hands-on</i> QA training program tailored for fresh graduates who prefer <i style={{
                     color: "yellow",
-                  }}>practical skills over theory</i>.<br></br><br></br><br></br><br></br> In this training program you will:</p>
+                  }}>practical skills over theory</i>.<br></br><br></br><br></br> In this training program you will:</p>
                 <ol>
                   <li class="sub-title">Test a real application</li>
                   <li class="sub-title">Shadow industry professionals</li>
