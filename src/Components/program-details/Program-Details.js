@@ -26,7 +26,7 @@ class Program extends Component {
                   <li>Time commitment: 9-hours/day</li><p>You need to be available from 10 am to 7 pm every day.</p>
                   <li>5 days a week</li><p>You are expected to work Mon-Fri every week.</p>
                   <li>Fully remote</li><p>The training is completely remote. You will not have any classroom training.</p>
-                  <li>Toolbelt: Industry standard tools</li><p>Python and/or JavaScript, Selenium and/or Cypress and/or TestCafe, Jira, ReportPortal, BrowserStack, APIs, Postman, git, git, GitHub, GitHub Actions, etc.</p>
+                  <li>Toolbelt: Industry standard tools</li><p>Python and/or JavaScript, Selenium and/or Cypress and/or TestCafe, Jira, ReportPortal, BrowserStack, APIs, Postman, git, GitHub, GitHub Actions, etc.</p>
                   <li>Pricing</li><p>The program costs INR 15,000 for the entire three month duration. The payment will happen at the start of the course and there are no refunds.</p>
                 </ol>
               </div>
