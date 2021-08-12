@@ -317,8 +317,7 @@ ul#nav li.current a {
 #why-us p,
 #program p,
 #placements p,
-#before-you-apply p,
-#about p{
+#before-you-apply p{
   font: 16px/21px "opensans", sans-serif;
   color:#444444;
   text-transform: none !important;

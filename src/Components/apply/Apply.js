@@ -693,7 +693,7 @@ class Apply extends Component {
                 />
               </label>
 
-              <label>Do you understand that:</label>
+              <label>Do you understand that <small><a href="/#before-you-apply">[learn more]</a></small>:</label>
 
               <div>
                 <label className="container" data-testid="check1">
