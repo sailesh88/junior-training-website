@@ -306,7 +306,8 @@ ul#nav li.current a {
 
 #eligibility li,
 #why-us li,
-#program li {
+#program li,
+#before-you-apply li {
   font: 18px/24px "opensans", sans-serif;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -315,7 +316,9 @@ ul#nav li.current a {
 #eligibility p,
 #why-us p,
 #program p,
-#placements p {
+#placements p,
+#before-you-apply p,
+#about p{
   font: 16px/21px "opensans", sans-serif;
   color:#444444;
   text-transform: none !important;
@@ -853,7 +856,8 @@ call-to-action .button {
 
 #eligibility h4,
 #program h4,
-#why-us h4{
+#why-us h4,
+#before-you-apply{
   color:#6F6F6F;
 }
 
