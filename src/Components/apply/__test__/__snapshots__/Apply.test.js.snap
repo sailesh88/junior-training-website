@@ -414,36 +414,23 @@ exports[`Apply.js matches snapshot 1`] = `
           />
         </label>
         <label>
-          Do you understand that:
+          Do you understand that this program 
+          <small>
+            <a
+              href="/#before-you-apply"
+            >
+              [learn more]
+            </a>
+          </small>
+          :
         </label>
         <div>
-          <label
-            className="container"
-            data-testid="check1"
-          >
-            fully remote
-             
-            <input
-              id="check1"
-              onChange={[Function]}
-              type="checkbox"
-            />
-             
-            <span
-              className="required"
-            >
-              *
-            </span>
-            <span
-              className="checkmark"
-            />
-          </label>
           <label
             className="container"
             data-testid="check2"
           >
              
-            not for everyone
+            is not for everyone
              
             <input
               id="check2"
@@ -462,32 +449,10 @@ exports[`Apply.js matches snapshot 1`] = `
           </label>
           <label
             className="container"
-            data-testid="check3"
-          >
-             
-            fast paced
-             
-            <input
-              id="check3"
-              onChange={[Function]}
-              type="checkbox"
-            />
-             
-            <span
-              className="required"
-            >
-              *
-            </span>
-            <span
-              className="checkmark"
-            />
-          </label>
-          <label
-            className="container"
             data-testid="check4"
           >
              
-            no placement guarantee
+            has no placement guarantee
              
             <input
               id="check4"
@@ -506,10 +471,53 @@ exports[`Apply.js matches snapshot 1`] = `
           </label>
           <label
             className="container"
+            data-testid="check1"
+          >
+            is fully remote
+             
+            <input
+              id="check1"
+              onChange={[Function]}
+              type="checkbox"
+            />
+             
+            <span
+              className="required"
+            >
+              *
+            </span>
+            <span
+              className="checkmark"
+            />
+          </label>
+          <label
+            className="container"
+            data-testid="check3"
+          >
+             
+            is fast paced
+             
+            <input
+              id="check3"
+              onChange={[Function]}
+              type="checkbox"
+            />
+             
+            <span
+              className="required"
+            >
+              *
+            </span>
+            <span
+              className="checkmark"
+            />
+          </label>
+          <label
+            className="container"
             data-testid="check5"
           >
              
-            no money back
+            has no refund policy 
              
             <input
               id="check5"

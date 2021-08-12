@@ -693,23 +693,12 @@ class Apply extends Component {
                 />
               </label>
 
-              <label>Do you understand that <small><a href="/#before-you-apply">[learn more]</a></small>:</label>
+              <label>Do you understand that this program <small><a href="/#before-you-apply">[learn more]</a></small>:</label>
 
               <div>
-                <label className="container" data-testid="check1">
-                  fully remote{" "}
-                  <input
-                    type="checkbox"
-                    id="check1"
-                    onChange={this.handleInputChange}
-                  />{" "}
-                  {imp}
-                  <span className="checkmark"></span>
-                </label>
-
                 <label className="container" data-testid="check2">
                   {" "}
-                  not for everyone{" "}
+                  is not for everyone{" "}
                   <input
                     type="checkbox"
                     id="check2"
@@ -719,21 +708,9 @@ class Apply extends Component {
                   <span className="checkmark"></span>
                 </label>
 
-                <label className="container" data-testid="check3">
-                  {" "}
-                  fast paced{" "}
-                  <input
-                    type="checkbox"
-                    id="check3"
-                    onChange={this.handleInputChange}
-                  />{" "}
-                  {imp}
-                  <span className="checkmark"></span>
-                </label>
-
                 <label className="container" data-testid="check4">
                   {" "}
-                  no placement guarantee{" "}
+                  has no placement guarantee{" "}
                   <input
                     type="checkbox"
                     id="check4"
@@ -743,9 +720,33 @@ class Apply extends Component {
                   <span className="checkmark"></span>
                 </label>
 
+                <label className="container" data-testid="check1">
+                  is fully remote{" "}
+                  <input
+                    type="checkbox"
+                    id="check1"
+                    onChange={this.handleInputChange}
+                  />{" "}
+                  {imp}
+                  <span className="checkmark"></span>
+                </label>
+
+
+                <label className="container" data-testid="check3">
+                  {" "}
+                  is fast paced{" "}
+                  <input
+                    type="checkbox"
+                    id="check3"
+                    onChange={this.handleInputChange}
+                  />{" "}
+                  {imp}
+                  <span className="checkmark"></span>
+                </label>
+
                 <label className="container" data-testid="check5">
                   {" "}
-                  no money back{" "}
+                  has no refund policy {" "}
                   <input
                     type="checkbox"
                     id="check5"
