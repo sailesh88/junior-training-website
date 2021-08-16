@@ -535,14 +535,14 @@ class Apply extends Component {
                         value="hardware"
                         name="project-type"
                       />
-                      Hardware
+                      &nbsp; Hardware
                       <br />
                       <input
                         type="radio"
                         value="software"
                         name="project-type"
                       />
-                      Software
+                      &nbsp; Software
                     </div>
                   </label>
                   {!this.state.isHardware ? (
@@ -633,13 +633,13 @@ class Apply extends Component {
                   onChange={this.handleChangeSelect}
                 >
                   <option data-testid="select-option" value="beginner">
-                    Beginner
+                  Beginner (I rarely write code)
                   </option>
                   <option data-testid="select-option" value="intermediate">
-                    Intermediate
+                  Intermediate (I write ~100 lines of code every week)
                   </option>
                   <option data-testid="select-option" value="expert">
-                    Expert
+                  Expert (I am fluent in at least one programming language)
                   </option>
                 </select>
               </label>

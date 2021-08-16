@@ -29,11 +29,11 @@ const inputProps = [
 ];
 
 const checkboxProps = [
-  { text: "fully remote", testId: "check1" },
-  { text: "not for everyone", testId: "check2" },
-  { text: "fast paced", testId: "check3" },
-  { text: "no placement guarantee", testId: "check4" },
-  { text: "no money back", testId: "check5" },
+  { text: "is fully remote", testId: "check1" },
+  { text: "is not for everyone", testId: "check2" },
+  { text: "is fast paced", testId: "check3" },
+  { text: "has no placement guarantee", testId: "check4" },
+  { text: "has no refund policy", testId: "check5" },
 ];
 
 it("renders without crashing", () => {
