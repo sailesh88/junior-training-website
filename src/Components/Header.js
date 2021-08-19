@@ -20,49 +20,49 @@ class Header extends Component {
 
           <ul id="nav">
             <li className="current">
-              <a className="smoothscroll" href="#home">
+              <a className="smoothscroll" href="#home" onClick={() => window.gtag('event', 'Home', {'event_category': 'nav' ,'event_label': 'home'})}>
                 Home
               </a>
             </li>
 
             <li>
-              <a className="smoothscroll" href="#benefits">
+              <a className="smoothscroll" href="#benefits" onClick={() => window.gtag('event', 'Benefits', {'event_category': 'nav' ,'event_label': 'benefits'})}>
                 Benefits
               </a>
             </li>
 
             <li>
-              <a className="smoothscroll" href="#why-us">
+              <a className="smoothscroll" href="#why-us" onClick={() => window.gtag('event', 'Why us', {'event_category': 'nav' ,'event_label': 'why us'})}>
                 Why Us?
               </a>
             </li>
 
             <li>
-              <a className="smoothscroll" href="#program">
+              <a className="smoothscroll" href="#program" onClick={() => window.gtag('event', 'Program details', {'event_category': 'nav' ,'event_label': 'program details'})}>
                 Program details
               </a>
             </li>
 
             <li>
-              <a className="smoothscroll" href="#eligibility">
+              <a className="smoothscroll" href="#eligibility" onClick={() => window.gtag('event', 'Eligibility', {'event_category': 'nav' ,'event_label': 'eligibility'})}>
                 Eligibility
               </a>
             </li>
 
             <li>
-              <a className="smoothscroll" href="#about">
+              <a className="smoothscroll" href="#about" onClick={() => window.gtag('event', 'About', {'event_category': 'nav' ,'event_label': 'about'})}>
                 About
               </a>
             </li>
 
             <li>
-              <a className="smoothscroll" href="#before-you-apply">
+              <a className="smoothscroll" href="#before-you-apply" onClick={() => window.gtag('event', 'Before you apply', {'event_category': 'nav' ,'event_label': 'before you apply'})}>
                 Before you apply
               </a>
             </li>
 
             <li>
-              <a className="smoothscroll" href="#apply">
+              <a className="smoothscroll" href="#apply" onClick={() => window.gtag('event', 'Apply', {'event_category': 'nav' ,'event_label': 'apply'})}>
                 Apply!
               </a>
             </li>

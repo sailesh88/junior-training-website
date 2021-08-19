@@ -420,7 +420,7 @@ class Apply extends Component {
                 Enter all your education detail expanding the Education{imp}
               </label>
 
-              <Collapsible trigger={<a href="">Education</a>}>
+              <Collapsible trigger={<a href="" onClick={() => window.gtag('event', 'Apply', {'event_category': 'apply' ,'event_label': 'education'})}>Education</a>}>
                 <div
                   style={{
                     display: "flex",
