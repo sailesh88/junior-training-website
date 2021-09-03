@@ -1,1 +1,9 @@
 node_modules/
+#Cypress
+cypress.json
+.env
+cypress.env.json
+junior-training-website.json
+token.json
+cypress/screenshots/
+cypress/videos/
