@@ -56,12 +56,6 @@ class Header extends Component {
             </li>
 
             <li>
-              <a className="smoothscroll" href="#before-you-apply" onClick={() => window.gtag('event', 'Before you apply', {'event_category': 'nav' ,'event_label': 'before you apply'})}>
-                Before you apply
-              </a>
-            </li>
-
-            <li>
               <a className="smoothscroll" href="#apply" onClick={() => window.gtag('event', 'Apply', {'event_category': 'nav' ,'event_label': 'apply'})}>
                 Apply!
               </a>
@@ -79,15 +73,13 @@ class Header extends Component {
           <div className="banner-text">
             <Fade bottom>
               <h1 className="responsive-headline">
-                No more classroom training!
+                Software testing for freshers!
               </h1>
             </Fade>
             <Fade bottom duration={1200}>
-                <p className="sub-title">Join a <i style={{
+                <p className="sub-title">Join a hands-on <i style={{
                     color: "yellow",
-                  }}>hands-on</i> QA training program tailored for fresh graduates who prefer <i style={{
-                    color: "yellow",
-                  }}>practical skills over theory</i>.<br></br><br></br><br></br> In this training program you will:</p>
+                  }}>SOFTWARE TESTING TRAINING PROGRAM</i> tailored for fresh graduates who prefer practical skills over theory.<br></br><br></br><br></br> In this training program you will:</p>
                 <ol>
                   <li class="sub-title">Test a real application</li>
                   <li class="sub-title">Shadow industry professionals</li>
