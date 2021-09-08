@@ -89,7 +89,7 @@ class Apply extends Component {
       this.state.email.length > 3 &&
       this.state.phone.trim().length > 9 &&
       this.state.phone.trim().length < 14 &&
-      this.state.highestEducation.trim().length >= 2 &&
+      this.state.highestEducation.trim().length >= 1 &&
       this.state.educationYear != null
     ) {
         return true;
