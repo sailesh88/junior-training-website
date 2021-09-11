@@ -16,5 +16,3 @@ jobs:
         script:  |
           cd junior-training-website/
           git pull
-          npm run-script build
-          cp -r build/* /var/www/junior-training-website/
