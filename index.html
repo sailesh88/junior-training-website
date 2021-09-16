@@ -96,14 +96,14 @@
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
-          <li><a class="nav-link scrollto" href="#benefits">Benefits</a></li>
-          <li><a class="nav-link scrollto" href="#program-details">Program details</a></li>
-          <li><a class="nav-link scrollto" href="#why-us">Why us</a></li>
-          <li><a class="nav-link scrollto" href="#eligibility">Eligibility</a></li>
-          <li><a class="nav-link scrollto" href="#about">About</a></li>
-          <li><a class="nav-link scrollto" href="#screenshots">Completion letters</a></li>
-          <li><a class="nav-link scrollto" href="#apply">Apply</a></li>
+          <li><a class="nav-link scrollto active" href="#hero" onclick="gtag('event', 'nav', { event_category: 'home' });">Home</a></li>
+          <li><a class="nav-link scrollto" href="#benefits" onclick="gtag('event', 'nav', { event_category: 'benefits' });">Benefits</a></li>
+          <li><a class="nav-link scrollto" href="#program-details" onclick="gtag('event', 'nav', { event_category: 'program details' });">Program details</a></li>
+          <li><a class="nav-link scrollto" href="#why-us" onclick="gtag('event', 'nav', { event_category: 'why us' });">Why us</a></li>
+          <li><a class="nav-link scrollto" href="#eligibility" onclick="gtag('event', 'nav', { event_category: 'eligibility' });">Eligibility</a></li>
+          <li><a class="nav-link scrollto" href="#about" onclick="gtag('event', 'nav', { event_category: 'about' });">About</a></li>
+          <li><a class="nav-link scrollto" href="#screenshots" onclick="gtag('event', 'nav', { event_category: 'screenshots' });">Completion letters</a></li>
+          <li><a class="nav-link scrollto" href="#apply" onclick="gtag('event', 'nav', { event_category: 'apply' });">Apply</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
@@ -117,7 +117,7 @@
       <h1>Software testing bootcamp</h1>
       <h2>Hands-on training for fresh graduates</h2>
       <img src="assets/img/hero-img.png" alt="Hero Imgs" data-aos="zoom-out" data-aos-delay="100">
-      <a href="#apply" class="btn-get-started scrollto">Apply</a>
+      <a href="#apply" class="btn-get-started scrollto" onclick="gtag('event', 'hero-apply', { event_category: 'click' });">Apply</a>
       <!--div class="btns">
         <a href="#"><i class="fa fa-apple fa-3x"></i> App Store</a>
         <a href="#"><i class="fa fa-play fa-3x"></i> Google Play</a>
